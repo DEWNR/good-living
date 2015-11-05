@@ -1,0 +1,16 @@
+/*------------------------------------*\
+    #ADDITIONAL-INFORMATION
+\*------------------------------------*/
+
+/**
+ * Basic formatting for additional information that is directly related to the
+ * main page content, such as comments, related links, references, etc.
+ */
+
+.#{$sagovau-namespace}additional-information {
+    @extend %margin-bottom;
+}
+
+    .#{$sagovau-namespace}additional-information__title {
+        @extend %beta;
+    }

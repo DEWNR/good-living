@@ -1,0 +1,80 @@
+/*------------------------------------*\
+    #SOCIAL
+\*------------------------------------*/
+
+/**
+ * Styling for the 'Good Living' social media and sharing icons.
+ */
+
+$sagovau-social-icon-types:     twitter facebook email print !default;
+
+.#{$sagovau-namespace}social {
+    @extend %#{$sagovau-namespace}no-print;
+    color: $sagovau-color-brand-secondary;
+}
+
+    /*span*/.#{$sagovau-namespace}social__title { }
+ 
+    /*ul*/.#{$sagovau-namespace}social__list {
+        @extend %#{$inuit-list-inline-namespace}list-inline;
+        @extend %margin-bottom;
+    }
+        
+        /**
+         * 1. Prevent unnecessary space below the list items
+         */
+         
+        /*li*/.#{$sagovau-namespace}social__item {
+            vertical-align: top;    /* [1] */
+            
+            & + & {
+                margin-left: $sagovau-spacing-unit-base--small;
+            }
+        }
+        
+            /*a*/.#{$sagovau-namespace}social__link {
+                background: {
+                    color:  $sagovau-color-brand-secondary;
+                    image:      url(#{$sagovau-path-svg}good-living-social-sprite.svg);
+                }
+                border:         none;
+                border-radius:  50%;
+                display:        block;
+                height:         $sagovau-spacing-unit-base * 1.5;
+                margin-bottom:  $sagovau-spacing-unit-base * 0.5;
+                width:          $sagovau-spacing-unit-base * 1.5;
+                
+                & + & {
+                    margin-left: $sagovau-spacing-unit-base--small;
+                }
+                
+                .#{$sagovau-namespace}social--reverse & {
+                    background: {
+                        color:  $sagovau-color-text-reverse;
+                        image:  url(#{$sagovau-path-svg}good-living-social-sprite--reverse.svg);
+                    }
+                }
+            }
+            
+            // Assign background images to each icon type
+            
+            @each $type in $sagovau-social-icon-types {
+            
+                .#{$sagovau-namespace}social__link--#{$type} {
+                    background: {
+                        position:   0 ((1 - index($sagovau-social-icon-types, $type)) * 1.5 * $sagovau-spacing-unit-base);
+                    }
+                }
+                
+            }
+
+
+.#{$sagovau-namespace}social--separator {
+    @extend %margin-bottom;
+    border-bottom:  1px solid $sagovau-color-brand-secondary--light;
+}
+
+
+.#{$sagovau-namespace}social--reverse {
+    color:  $sagovau-color-text-reverse;
+}

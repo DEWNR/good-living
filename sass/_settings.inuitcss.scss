@@ -1,0 +1,38 @@
+/*------------------------------------*\
+    #INUITCSS FRAMEWORK SETTINGS
+\*------------------------------------*/
+
+/**
+ * The site's inuitcss settings. Builds on the series' inuitcss settings.
+ */
+
+// Import the series settings
+
+@import "dewnr-bedrock/sass/_settings.inuitcss.scss";
+
+
+
+
+
+/* = Layout = */
+
+$inuit-enable-layout--small:            true;
+
+
+/* = Widths = */
+
+$inuit-widths-columns: (
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+);
+
+$inuit-widths-columns-responsive: $inuit-widths-columns;
+
+/* = Other = */
+
+$inuit-enable-list-block--small:        true;
+$inuit-enable-margins:                  true;

@@ -1,0 +1,41 @@
+/*------------------------------------*\
+    #POST-DETAILS
+\*------------------------------------*/
+
+/**
+ * Styling for the 'Stories of our environment' post details (eg date, category,
+ * etc).
+ */
+ 
+/*ul*/.#{$sagovau-namespace}post-details {
+    @extend %#{$inuit-list-inline-namespace}list-bare;
+}
+    
+    /*li*/.#{$sagovau-namespace}post-details__item { }
+    
+    
+    // Prevent the comments link from being printed or displayed in browsers without JavaScript enabled.
+    
+    /*li*/.#{$sagovau-namespace}post-details__item--comments {
+        @extend %#{$sagovau-namespace}no-print;
+        @extend %#{$sagovau-namespace}js-only;
+    }
+    
+    
+    // Make sure the first letter in the category list is capitalised.
+    
+    /*li*/.#{$sagovau-namespace}post-details__item--categories {
+        &::first-letter {
+            text-transform: uppercase;
+        }
+    }
+    
+        /**
+         * 1. If there is more than one category, separate the list with commas.
+         */
+        
+        /*span*/.#{$sagovau-namespace}post-details__category {
+            &+&:before {
+                content: ", ";   /* [1] */
+            }
+        }

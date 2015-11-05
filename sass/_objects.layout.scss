@@ -1,0 +1,27 @@
+/*------------------------------------*\
+    #LAYOUT
+\*------------------------------------*/
+
+/**
+ * Add some additional site-specific variations to inuitcss's layouts.
+ */
+
+@import "inuit-layout/_objects.layout.scss";
+
+/**
+ * 1. Add a small amount of extra padding to either side of the layout
+ *    container on smaller screens.
+ *
+ * 2. Add a larger amount of padding solely to the left on larger screens.
+ */
+
+.#{$sagovau-namespace}layout--indent {
+    padding-left:   $sagovau-spacing-unit-base--small;  /* [1] */
+    padding-right:  $sagovau-spacing-unit-base--small;  /* [1] */
+
+    @include media-query(large-and-up) {
+        padding-left:   $sagovau-spacing-unit-base; /* [2] */
+        padding-right:  0;  /* [2] */
+    }
+
+}

@@ -1,0 +1,105 @@
+/*------------------------------------*\
+    #primary-navigation
+\*------------------------------------*/
+
+/**
+ * Styling for the 'Good Living' site navigation menu.
+ */
+
+$sagovau-navigation-width:  320px !default;
+
+/**
+ * 1. Attach the menu to the top left-hand side of screen.
+ *
+ * 2. Stretch it to the bottom of the screen.
+ *
+ * 3. Use a negative margin to position the menu off screen.
+ *
+ * 4. Use an "active" class to position the menu on screen with a drop shadow.
+ *
+ * 5. Use transitions to animate the activation.
+ */
+
+/*nav*/.#{$sagovau-namespace}primary-navigation {
+    background-color:   $sagovau-color-brand-secondary;     // Fallback for browsers without RGBA support
+    background-color:   rgba($sagovau-color-brand-secondary, 0.95);
+    bottom:             0;  /* [2] */
+    left:               0;  /* [1] */
+    margin-left:        -$sagovau-navigation-width; /* [3] */
+    margin-right:       0;
+    position:           absolute;  /* [1] */
+    top:                0;  /* [1] */
+    transition:         margin-left $sagovau-transition-time, box-shadow $sagovau-transition-time;  /* [5] */
+    width:              $sagovau-navigation-width;
+    z-index:            9999;
+    
+    @extend %#{$sagovau-namespace}no-print;
+    
+    // Add fallback for browsers that don't have JavaScript enabled.
+    
+    .no-js & {
+        @extend %#{$sagovau-namespace}wrapper;
+
+        margin-bottom: $sagovau-spacing-unit-base;
+        padding:    0 $sagovau-spacing-unit-base--small;
+        position:   relative;
+        width:      100%;
+    }
+}
+
+/*nav*/.#{$sagovau-namespace}primary-navigation--active {
+    box-shadow: 0 0 $sagovau-spacing-unit-base--small rgba(0,0,0,0.5); /* [4] */
+    margin-left:    0;  /* [4] */
+}
+    
+    
+    /*ul*/.#{$sagovau-namespace}primary-navigation__content {
+        color:              $sagovau-color-text-reverse;
+        font-weight:        bold;
+        list-style:         none;   /* [1] */
+        margin:             0;      /* [1] */
+        
+        /**
+         * Add extra styling for browsers with JavaScript enabled.
+         *
+         * 1. Display as a full-height flyout menu.
+         *
+         * 2. Make sure the list's content doesn't overlap with the close button.
+         */
+        
+        .js & {
+            min-height:     100%;   /* [1] */
+            padding:        $sagovau-spacing-unit-base--small;  /* [1] */
+            padding-right:  2 * $sagovau-spacing-unit-base;  /* [2] */
+        }
+    }
+    
+        /*li*/.#{$sagovau-namespace}primary-navigation__item {
+        
+            & + & {
+                border-top:  1px solid $sagovau-color-text-reverse;
+            }
+            
+        }
+            
+            // Style the links as touch-friendly menu items
+            
+            /*a*/.#{$sagovau-namespace}primary-navigation__link {
+                color:                  $sagovau-color-text-reverse;
+                display:                block;
+                padding:                $sagovau-spacing-unit-base--small;
+                text-decoration:        none;
+                
+                &:hover {
+                    text-decoration:    underline;
+                }
+            }
+    
+    .#{$sagovau-namespace}primary-navigation__close {
+        @extend %#{$sagovau-namespace}js-only;  // Only display the close button in JavaScript-enabled browsers
+        cursor:     pointer;
+        display:    block;
+        position:   absolute;
+        right:      0;
+        top:        0;
+    }

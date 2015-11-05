@@ -1,0 +1,65 @@
+/*------------------------------------*\
+    #BANNER
+\*------------------------------------*/
+
+/**
+ * Styling for the 'Good Living' website heading banners that is 
+ * not covered anywhere else.
+ */
+
+/**
+ * Although this is (nominally) an img element, this is purely for semantics:
+ * the visible image is set inline using background-image to allow easy
+ * cropping. See http://csswizardry.com/2013/01/your-logo-is-still-an-image-and-so-is-mine/
+ * for an explanation.)
+ *
+ * 1. Set the height to zero to prevent the image from being displayed.
+ *
+ * 2. Use padding to give the banner its dimensions for screen display.
+ *
+ * 3. Use height to give the banner its dimensions for print.
+ */
+  
+/*img*/.#{$sagovau-namespace}banner {
+    @extend %margin-bottom;
+    background: {
+        position:           center;
+        size:               cover;
+    }
+    display:                block;
+    height:                 0;
+    padding:                0 0 8 * $sagovau-spacing-unit-base;
+    width:                  100%;
+    
+    @include media-query(small-and-up) {
+        padding:            0 0 11 * $sagovau-spacing-unit-base;
+    }
+    
+    @include media-query(medium-and-up) {
+        padding:            0 0 14 * $sagovau-spacing-unit-base;
+    }
+    
+    @include media-query(large-and-up) {
+        padding:            0 0 17 * $sagovau-spacing-unit-base;
+    }
+    
+    @include media-query(huge) {
+        padding:            0 0 20 * $sagovau-spacing-unit-base;
+    }
+    
+    @media print {
+        height:     auto;
+        padding:    0;
+    }
+}
+
+
+// Image position variations
+
+.#{$sagovau-namespace}banner--image-left {
+    background-position:    left center;
+}
+
+.#{$sagovau-namespace}banner--image-right {
+    background-position:    right center;
+}

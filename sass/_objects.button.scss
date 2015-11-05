@@ -1,0 +1,178 @@
+/*------------------------------------*\
+    #BUTTON
+\*------------------------------------*/
+
+/**
+ * A padded container with or without borders. Similar to ISLAND.
+ */
+
+// Disable all variations by default so unneeded items are not included.
+
+$sagovau-enable-button--small:                     false !default; // half-width padding
+$sagovau-enable-button--large:                     false !default; // double-width padding
+
+$sagovau-enable-button--brand:                     false !default;
+$sagovau-enable-button--brand-secondary:           false !default;
+
+$sagovau-enable-button--block:                     false !default; // display the button as a block element
+$sagovau-button-border:                            null !default;  // add a solid border - set to pixel width to generate extra class(es)
+$sagovau-button-border-radius:                     null !default;  // add rounded corners - set to width or percentage to add styles
+$sagovau-enable-button--inactive:                  false !default; // add transparency to the button and prevent the cursor from changing
+
+
+/**
+ * 1. Add styling to override standard styles for <a> tags.
+ *
+ * 2. If a value is set for $sagovau-button-border, set a border colour. As the
+ *    border style is set to none, the border can be enabled by adding the
+ *    button--border class.
+ **/
+
+.#{$sagovau-namespace}button {
+    @extend %margin-bottom;
+    @if $sagovau-button-border != null {
+        border-color:   $sagovau-color-text-base;  /* [2] */
+    }
+    border-style:       none;
+    color:              $sagovau-color-text-base;   /* [1] */
+    padding:            $sagovau-spacing-unit-base 1.5 * $sagovau-spacing-unit-base;
+    text-align:         center;
+    text-decoration:    none;   /* [1] */
+
+    @if $sagovau-button-border != null {
+
+        &.#{$sagovau-namespace}button--border {
+            border-style:   solid;
+            padding: ($sagovau-spacing-unit-base - $sagovau-button-border) (1.5 * $sagovau-spacing-unit-base - $sagovau-button-border);
+        }
+
+    }
+
+}
+
+
+
+
+
+// Padding variations
+
+@if $sagovau-enable-button--small == true {
+
+    .#{$sagovau-namespace}button--small {
+        padding: $sagovau-spacing-unit-base--small 1.5 * $sagovau-spacing-unit-base--small;
+
+        @if $sagovau-button-border != null {
+
+            &.#{$sagovau-namespace}button--border {
+                border-style:   solid;
+                padding: ($sagovau-spacing-unit-base--small - $sagovau-button-border) (1.5 * $sagovau-spacing-unit-base--small - $sagovau-button-border);
+            }
+
+        }
+
+    }
+
+}
+
+
+@if $sagovau-enable-button--large == true {
+
+    .#{$sagovau-namespace}button--large {
+        padding: $sagovau-spacing-unit-base--large 1.5 * $sagovau-spacing-unit-base--large;
+
+        @if $sagovau-button-border != null {
+
+            &.#{$sagovau-namespace}button--border {
+                border-style:   solid;
+                padding: ($sagovau-spacing-unit-base--large - $sagovau-button-border) (1.5 * $sagovau-spacing-unit-base--large - $sagovau-button-border);
+            }
+
+        }
+
+    }
+
+}
+
+
+
+
+
+// Colour variations
+
+@if $sagovau-enable-button--brand == true {
+
+    .#{$sagovau-namespace}button--brand {
+        background-color:   $sagovau-color-brand;
+        color:              $sagovau-color-text-reverse;
+
+        @if $sagovau-button-border != null {
+
+            &.#{$sagovau-namespace}button--border {
+                background-color:   $sagovau-color-background-base;
+                border-color:       $sagovau-color-brand-secondary;
+                color:              $sagovau-color-brand-secondary;
+            }
+
+        }
+
+    }
+
+}
+
+
+@if $sagovau-enable-button--brand-secondary == true {
+
+    .#{$sagovau-namespace}button--brand-secondary {
+        background-color:   $sagovau-color-brand-secondary;
+        color:              $sagovau-color-text-reverse;
+
+        @if $sagovau-button-border != null {
+
+            &.#{$sagovau-namespace}button--border {
+                background-color:   $sagovau-color-background-base;
+                border-color:       $sagovau-color-brand-secondary;
+                color:              $sagovau-color-brand-secondary;
+            }
+
+        }
+
+    }
+
+}
+
+
+
+
+
+// Other variations
+
+@if $sagovau-enable-button--block == true {
+
+    .#{$sagovau-namespace}button--block {
+        display:    block;
+    }
+
+}
+
+@if $sagovau-button-border != null {
+
+    .#{$sagovau-namespace}button--border {
+        border-width:   $sagovau-button-border;
+
+        @if $sagovau-button-border-radius != null {
+            border-radius:  $sagovau-button-border-radius;
+        }
+
+    }
+
+}
+
+
+@if $sagovau-enable-button--inactive != null {
+
+    .#{$sagovau-namespace}button--inactive {
+        opacity:    0.5;
+        cursor:     default;
+    }
+
+}

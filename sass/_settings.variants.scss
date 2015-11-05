@@ -1,0 +1,24 @@
+/*------------------------------------*\
+    #VARIANT SETTINGS
+\*------------------------------------*/
+
+/**
+ * Settings that are derived from the site's main settings. Builds on the
+ * series' variant settings.
+ **/
+
+// Import the series settings
+
+@import "dewnr-bedrock/sass/_settings.variants.scss";
+
+
+
+
+
+/* = Colours = */
+
+$sagovau-color-brand--light:            tint($sagovau-color-brand, $sagovau-tint-base);
+$sagovau-color-brand--dark:             shade($sagovau-color-brand, $sagovau-shade-base);
+
+$sagovau-color-brand-secondary--light:  tint($sagovau-color-brand-secondary, 70%);
+$sagovau-color-brand-secondary--dark:   shade($sagovau-color-brand-secondary, 70%);

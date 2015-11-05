@@ -1,0 +1,23 @@
+/*------------------------------------*\
+    #POST
+\*------------------------------------*/
+
+/**
+ * Styling for the 'Stories of our environment' blog posts.
+ */
+ 
+/*article*/.#{$sagovau-namespace}post { }
+
+    /*header*/.#{$sagovau-namespace}post__header {
+        margin-bottom:  $sagovau-spacing-unit-base--small;
+    }
+    
+        /*h1*/.#{$sagovau-namespace}post__title {
+            margin-bottom:  $sagovau-spacing-unit-base--small
+        }
+    
+    
+    /*p*/.#{$sagovau-namespace}post__intro {
+        @include inuit-font-size($sagovau-font-size-base--large);
+        font-weight: bold;
+    }
