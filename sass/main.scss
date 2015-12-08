@@ -77,14 +77,24 @@
 
 /* = Base styling = */
 
+/* == inuitcss == */
+
 @import "inuit-images/_base.images.scss";
 @import "inuit-lists/_base.lists.scss";
+
+
+/* == Global == */
+
 @import "dewnr-bedrock/sass/_base.blockquote.scss";
 @import "dewnr-bedrock/sass/_base.fonts.scss";
 @import "dewnr-bedrock/sass/_base.forms.scss";
 @import "dewnr-bedrock/sass/_base.headings.scss";
 @import "dewnr-bedrock/sass/_base.main.scss";
 @import "dewnr-bedrock/sass/_base.page.scss";
+@import "dewnr-bedrock/sass/_base.tables.scss";
+
+
+
 
 
 /* = Objects = */
