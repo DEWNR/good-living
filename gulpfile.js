@@ -167,7 +167,7 @@ sassOptions = {
 jsList = [
     {
         source: [
-            paths.src.js + "beta/good-living/prepare.js",
+            paths.src.js + "prepare.js",
             paths.src.includes + "modernizr/modernizr.custom.45448.js"
         ],
         destination: paths.dest.js + "/beta/good-living/",
@@ -180,6 +180,13 @@ jsList = [
         ],
         destination: paths.dest.js + "/beta/good-living/",
         filename: "enhance.js"
+    },
+    {
+        source: [
+            paths.src.js + "home.js"
+        ],
+        destination: paths.dest.js,
+        filename: "home.js"
     }
 ];
 

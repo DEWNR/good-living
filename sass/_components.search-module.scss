@@ -1,0 +1,42 @@
+/*------------------------------------*\
+    #SEARCH-MODULE
+\*------------------------------------*/
+
+
+/*div*/.#{$sagovau-namespace}search-module {
+    padding: $sagovau-spacing-unit-base / 2;
+    margin-bottom: $sagovau-spacing-unit-base;
+
+    @include media-query(small-and-up) {
+        padding: $sagovau-spacing-unit-base * 2 $sagovau-spacing-unit-base $sagovau-spacing-unit-base;
+        margin-bottom: $sagovau-spacing-unit-base * 2
+    }
+
+    /*input*/.#{$sagovau-namespace}inputBox {
+        height: 3em;
+        margin-right: $sagovau-spacing-unit-base / 2;
+        padding: 0 $sagovau-spacing-unit-base;
+        width: calc(100% - 97px);
+
+        &:focus {
+            border: 1px solid #413c38;
+            outline: 0;
+        }
+    }
+
+
+    input[type=submit] {
+        height: 3em;
+        margin: 0;
+        width: 80px;
+        border: 0;
+        background: $sagovau-color-brand;
+        color: #fff;
+
+        &:hover,
+        &:focus {
+            background: darken($sagovau-color-brand, 50%);
+            outline: 0;
+        }
+    }
+}

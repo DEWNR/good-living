@@ -1,0 +1,57 @@
+/*------------------------------------*\
+    #SITE-PAGINATION
+\*------------------------------------*/
+
+
+/*div*/.#{$sagovau-namespace}site-pagination {
+    @extend %#{$sagovau-namespace}clearfix;
+    padding: $sagovau-spacing-unit-base / 2;
+    margin-bottom: $sagovau-spacing-unit-base;
+    background: lighten($sagovau-color-brand, 85%);
+    border-top: 1px solid $sagovau-color-brand-secondary;
+
+    @include media-query(small-and-up) {
+        padding: $sagovau-spacing-unit-base $sagovau-spacing-unit-base $sagovau-spacing-unit-base;
+        margin-bottom: $sagovau-spacing-unit-base * 2
+    }
+
+    .btn_scPagingNonJS_enabled {
+        margin: 0;
+        border: 0;
+        background: $sagovau-color-brand;
+        color: #fff;
+
+        &:hover,
+        &:focus {
+            background: darken($sagovau-color-brand, 50%);
+            outline: 0;
+        }
+    }
+}
+
+
+    /*div*/.#{$sagovau-namespace}site-pagination__result {
+        margin: 0 0 1em;
+        text-align: center;
+
+        @include media-query(small-and-up) {
+            float: left;
+            margin: 0;
+            text-align: left;
+            width: 50%;
+        }
+    }
+
+    /*div*/.#{$sagovau-namespace}site-pagination__jumpto {
+        text-align: center;
+
+        select {
+            margin-right: $sagovau-spacing-unit-base--small;
+        }
+
+        @include media-query(small-and-up) {
+            float: left;
+            text-align: right;
+            width: 50%;
+        }
+    }
