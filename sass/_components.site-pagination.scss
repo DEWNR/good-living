@@ -18,12 +18,12 @@
     .btn_scPagingNonJS_enabled {
         margin: 0;
         border: 0;
-        background: $sagovau-color-brand;
+        background: $sagovau-color-brand-secondary;
         color: #fff;
 
         &:hover,
         &:focus {
-            background: darken($sagovau-color-brand, 50%);
+            background: $sagovau-color-brand;
             outline: 0;
         }
     }
