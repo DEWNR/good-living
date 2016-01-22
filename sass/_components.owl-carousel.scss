@@ -96,7 +96,7 @@ $sagovau-owl-carousel-stage-shadow-spread:  $sagovau-spacing-unit-base--small !d
 
         &::before, &::after {   /* [3] */
             bottom:     0;
-            box-shadow: 0 0 $sagovau-owl-carousel-stage-shadow-spread $sagovau-owl-carousel-stage-shadow-color;
+            // box-shadow: 0 0 $sagovau-owl-carousel-stage-shadow-spread $sagovau-owl-carousel-stage-shadow-color;
             content:    "";
             display:    block;
             position:   absolute;

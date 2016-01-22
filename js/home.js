@@ -16,7 +16,7 @@ $('[data-js=carousel]').owlCarousel({
         },
         // breakpoint from 768 up
         1024 : {
-            center:     true,   // Needs to be redefined each time
+            center:     false,   // Needs to be redefined each time
             items:      2
         }
     }
