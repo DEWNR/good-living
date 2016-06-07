@@ -1,0 +1,309 @@
+
+
+
+
+
+/* Form styles */
+.se-form-container {
+    table,
+    tr,
+    td,
+    tbody {
+        padding: 0;
+        //outline: 0;
+        // border: 0;
+    }
+
+    table {
+        min-width: 16%;
+    }
+
+    table:not(.generic-form-radiobutton) { //remove borders
+        //border: 0;
+        tr,
+        td,
+        tbody {
+            border: 0;
+        }
+    }
+
+    > .ui-form__item:nth-last-child(3) table.generic-form-checkbox tbody td {
+        border: 1px solid #e6eaee;
+        // background: red;
+    }
+
+    > .ui-form__item:nth-child(7) .ui-form__input table.generic-form-radiobutton td { //How often do you spend time in nature?
+        border: 0;
+        // background: red;
+    }
+
+    input[type=text] {
+        height: 2em;
+        padding: 0.5em 0.3em;
+    }
+    select {
+        // line-height: 2em;
+        padding: 0.3em;
+    }
+
+    input[type=checkbox], input[type=radio] {
+        float: left;
+        // margin-right: 1em;
+        // margin-top: 0.3em;
+        //padding: 0.9em 0.5em;
+        display: inline-block;
+        cursor: pointer;
+        // width: 1.3em;
+        // height: 1.3em;
+    }
+    label {
+        cursor: pointer;
+    }
+
+    input:not([type=checkbox]):not([type=radio]):not([type=submit]) {
+        width: 100%;
+    }
+
+    .generic-form-checkbox {
+        input {
+            margin-top: 0.74em;
+            padding-right: 1em;
+        }
+        label {
+            padding-left: 1em;
+            padding-right: 1em;
+            line-height: 2.2em;
+            // height: 2em;
+            // padding-top: 1em;
+            // padding-bottom: 0.3em;
+        }
+    }
+
+    .generic-form-radiobutton {
+        input {
+            margin-top: 0.74em;
+            padding-right: 1em;
+        }
+        label {
+            padding-left: 1em;
+            padding-right: 1em;
+            line-height: 2.2em;
+        }
+    }
+
+    .ui-form__item {
+        padding-top: 10px;
+    }
+
+
+    > .ui-form__item:nth-child(7) { //How often do you spend time in nature?
+        table {
+            min-width: 21em;
+        }
+    }
+
+    > .ui-form__item:nth-child(8) { //What's your reason for spending time in nature?
+        table {
+            min-width: 21em;
+        }
+    }
+
+    > .ui-form__item:nth-child(9) { //How would you describe your nature know-how?
+        table {
+            min-width: 21em;
+        }
+    }
+
+    // table#ctl02_rpControls_ctl15_fiControl_se_form {
+    //     tr {
+    //         display: inline-block;
+    //     }
+    //     tr:not(:last-of-type) td {
+    //         border-right: 0;
+    //     }
+    //     input {
+    //         width: 100%;
+    //     }
+    //     label {
+    //         padding-left: 0.9em;
+    //     }
+    // }
+
+    // #ctl02_rpControls_ctl06_fiControl_se_form_0 {
+    //     display: block;
+    // }
+
+    input#ctl02_rpControls_ctl02_fiControl_se_form {  //Phone
+        width: 13em;
+    }
+
+
+    > .ui-form--seamless > .ui-form__item:nth-child(6) { //Upload a photo
+        input {
+            padding-top: 0.2em;
+        }
+    }
+
+    .generic-form-label {
+        display: block;
+        // background: red;
+        padding-top: 0.5em;
+    }
+
+    > .ui-form__item:nth-child(3) { //Age
+        float:      left;
+        display:    inline-block;
+
+        table {
+            margin-right: 1em;
+            tr {
+                float: left;
+            }
+            tr:not(:last-of-type) td {
+                border-right: 0;
+            }
+            // tr:last-of-type td {
+            //     border: 1px solid #e6eaee;
+            // }
+            input {
+                width: 100%;
+            }
+            label {
+                padding-left: 0.9em;
+            }
+        }
+   }
+
+    > .ui-form__item:nth-child(4) { //Sex
+        display: inline-block;
+        clear: right;
+        table {
+
+            tr {
+                float:left;
+            }
+
+            tr td {
+                width: 4.1em;
+                input[type=radio] {
+                    width: 100%;
+                }
+            }
+
+            tr:not(:last-of-type) td {
+                border-right: 0;
+            }
+
+            // tr:last-of-type td {
+            //     border: 1px solid #e6eaee;
+            // }
+        }
+    }
+
+    > .ui-form__item:nth-child(5) { //Which of these environmental topics interest you?
+        display: block;
+        clear: both;
+        table {
+            min-width: 21em;
+        }
+    }
+
+
+    .ui-form__item:nth-last-of-type(3) { //I want to subscribe to the Good Living blog
+        .ui-form__input {
+            // width: 8em;
+
+            table.generic-form-radiobutton {
+                margin-right: 1em;
+                tr {
+                    float: left;
+                }
+                tr:not(:last-of-type) td {
+                    border-right: 0;
+                }
+                // tr:last-of-type td {
+                //     border: 1px solid #e6eaee;
+                // }
+                input {
+                    width: 100%;
+                }
+                label {
+                    padding-left: 0.9em;
+                }
+            }
+        }
+    }
+
+    .ui-form__item:nth-last-of-type(2) { //By submitting your entry, you agree to subscribe to Good Living
+        .ui-form__input {
+            width: 6em;
+        }
+        td {
+            // padding-left: 0.9em;
+            // padding-right: 0.9em;
+            padding: 0.4em 1.1em;
+        }
+        td label {
+            padding: 0;
+        }
+        td input[type=checkbox] {
+            margin-right: 0;
+        }
+    }
+
+    .ui-form__item:last-of-type { //Submit button
+        padding-bottom: 1em;
+
+        input[type=submit],
+        input[type=button],
+        input[type=reset] {
+            padding: 0.7em 2.8em;
+            font-weight: bold;
+            border: 0;
+            background: green;
+            color: white;
+            &:hover {
+                background: darkgreen;
+            }
+        }
+    }
+}
+
+/* Mobile Portrait and Landscape */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .se-form-container {
+        > .ui-form--seamless > .ui-form__item:nth-child(6) { //Upload a photo
+            padding-top: 1em;
+        }
+        table#ctl02_rpControls_ctl08_fiControl_se_form { //Age
+            label {
+                // padding-left: 0;
+            }
+
+            td {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+        > .ui-form__item:nth-child(5),
+        > .ui-form__item:nth-child(6),
+        > .ui-form__item:nth-child(7),
+        > .ui-form__item:nth-child(8),
+        > .ui-form__item:nth-child(9) { //How often do you spend time in nature?
+            table {
+                min-width: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+}
+/* End Form styles */
+
+
+
+
+
+
