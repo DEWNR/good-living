@@ -1,0 +1,9 @@
+{% extends 'layouts/master.nunjucks' %}
+
+
+
+
+
+{% block content %}
+    Index page
+{% endblock %}
