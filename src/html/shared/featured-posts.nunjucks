@@ -1,0 +1,56 @@
+<!-- Featured posts -->
+
+<section>
+
+    <h2 class="u-visually-hidden">Featured posts</h2>
+
+    <a href="#" class="navigation-tile  navigation-tile--huge">
+
+        <img alt="" class="navigation-tile__image  navigation-tile__image--0fc33ac0-bea5-4deb-a8c1-1c9027d879b8" src="http://via.placeholder.com/760x480" style="background-image:url(http://via.placeholder.com/760x480);">
+
+        <div class="navigation-tile__text">
+
+            <h3 class="navigation-tile__title beta">Up close and personal with giant cuttlefish</h3>
+
+            <p>Underwater photographer Carl Charter shares his experience and stunning photos of SA’s giant cuttlefish migration.</p>
+
+        </div><!-- /navigation-tile__text -->
+
+    </a><!-- /navigation-tile -->
+
+
+    <div class="layout  layout--small">
+
+        <a href="#" class="navigation-tile  navigation-tile--large  layout__item    u-1-of-2-large-and-up">
+
+            <img alt="" class="navigation-tile__image  navigation-tile__image--f7280b10-b506-488c-996a-051bb91ad480" src="http://via.placeholder.com/679x302" style="background-image:url(http://via.placeholder.com/679x302);">
+
+            <div class="navigation-tile__text">
+
+                <h3 class="navigation-tile__title">5 perfect parks for a winter escape</h3>
+
+                <p>Winter shouldn’t mean putting a lid on your sense of adventure. At these SA parks, it’s a great time to visit.</p>
+
+            </div><!-- /navigation-tile__text -->
+
+        </a><!-- /navigation-tile
+
+        --><a href="#" class="navigation-tile  navigation-tile--large  layout__item    u-1-of-2-large-and-up">
+
+            <img alt="" class="navigation-tile__image  navigation-tile__image--b44c2c7e-86de-4011-9ae1-0c2b47e2f972" src="http://via.placeholder.com/679x302" style="background-image:url(http://via.placeholder.com/679x302);">
+
+            <div class="navigation-tile__text">
+
+                <h3 class="navigation-tile__title">What to do if there’s a possum in your roof</h3>
+
+                <p>Do you have a furry housemate you’d like to evict? Here are four simple and gentle ways to move them along.</p>
+
+            </div><!-- /navigation-tile__text -->
+
+        </a><!-- /navigation-tile -->
+
+    </div>
+
+</section><!-- /js-carousel -->
+
+<!-- End featured posts -->

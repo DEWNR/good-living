@@ -185,11 +185,23 @@
         <!-- End information area -->
 
 
+        {% include "shared/site-header.nunjucks" %}
 
 
+        {% include "shared/primary-navigation.nunjucks" %}
 
-        {% block content %}
-        {% endblock %}
+
+        <!-- Main content -->
+
+        <main class="wrapper  wrapper--ph-small" role="main">
+            {% block content %}
+            {% endblock %}
+        </main>
+
+        <!-- End main content -->
+
+
+        {% include "shared/site-footer.nunjucks" %}
 
 
 
