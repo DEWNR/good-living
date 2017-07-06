@@ -1,0 +1,11 @@
+<section class="comments  additional-information  js-only">
+
+    <h2 class="additional-information__title">Comments</h2>
+
+    <p>Log in to Disqus, Facebook, Twitter or Google to make a comment. If you would prefer not to log in you can still make a comment by selecting 'I'd rather post as a guest' after entering your name and email address.</p><p>Check our <a href="http://www.environment.sa.gov.au/goodliving/about/comments-policy">blog comments policy</a> before posting.</p>
+
+    <div id="disqus_thread"></div>
+
+    <p><em>This commenting service is powered by <a href="https://disqus.com/">Disqus</a>. Disqus is not affliated with the Department of Environment, Water and Natural Resources.</em></p>
+
+</section><!-- /comments -->
