@@ -99,6 +99,9 @@
 
         </script>
 
+
+        <script src="{{ js_path }}prepare.js"></script>
+
         <!-- Google Analytics -->
 
         <script>
@@ -208,8 +211,53 @@
 
 
         {% block javascript %}
+        <!-- Scripts -->
 
-            <script src="{{ js_path }}main.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.28/angular.min.js"></script>
+
+        <script>
+            $('table').prop('tabIndex', -1);
+        </script>
+
+        <script src="{{ js_path }}enhance.js"></script>
+        <script src="{{ js_path }}main.js"></script>
+
+        <script type="text/javascript">
+
+        (function() {
+
+            if (typeof goodliving === "undefined") {
+
+                window.goodliving = {};
+
+            } else if (typeof goodliving !== "object") {
+
+                return false;
+
+            }
+
+            goodliving.posts = (function () {
+                var json = null;
+
+                $.ajax({
+                    'async': false,
+                    'global': false,
+                    'url': 'data/posts.json',
+                    'dataType': "json",
+                    'success': function (data) {
+                        json = data;
+                    }
+                });
+
+                return json;
+            })();
+
+        })();
+
+        </script>
+
+        <!-- End scripts -->
 
         {% endblock %}
 

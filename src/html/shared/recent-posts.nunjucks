@@ -309,8 +309,8 @@
 
 </li><!-- /layout__item
 --><li class="layout__item  u-1-of-2 u-1-of-3-small-and-up  u-1-of-4-large-and-up  u-1-of-5-huge" data-ng-cloak data-ng-repeat="post in list.posts | limitTo: list.loadedPostCount">
-
-    <a href="#" class="navigation-tile  navigation-tile--small">
+    {% raw %}
+        <a href="#" class="navigation-tile  navigation-tile--small">
 
             <img alt="" class="navigation-tile__image" data-ng-src="http://{{post.image}}" style="background-image:url(http://{{post.image}});">
 
@@ -327,6 +327,7 @@
             </div><!-- /navigation-tile__text -->
 
         </a><!-- /navigation-tile -->
+    {% endraw %}
 
     </li><!-- /layout__item -->
 

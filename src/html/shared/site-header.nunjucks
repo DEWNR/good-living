@@ -53,7 +53,7 @@
 
             <a class="site-header__item  site-header__item--partner-logo" href="http://www.southaustralia.com"><img src="{{ image_path }}good-living-south-australia-logotype.svg" alt="South Australia" style="margin-top:-6px;"></a>
 
-          <a class="site-header__item  site-header__item--partner-logo" href="http://www.environment.sa.gov.au" style="margin-top:6px;"><img alt="Department of Environment, Water and Natural Resources" class="u-hidden-retina" src="/files/templates/00000000-0000-0000-0000-000000000000/50a56d79-deb3-4c4f-8bc1-0849e9ea1fc5/good-living-dewnr-logotype.png"><img alt="Department of Environment, Water and Natural Resources" class="u-hidden u-display-inline-block-retina" src="{{ image_path }}good-living-dewnr-logotype.svg"></a>
+          <a class="site-header__item  site-header__item--partner-logo" href="http://www.environment.sa.gov.au" style="margin-top:6px;"><img alt="Department of Environment, Water and Natural Resources" class="u-hidden-retina" src="{{ image_path }}good-living-dewnr-logotype.png"><img alt="Department of Environment, Water and Natural Resources" class="u-hidden u-display-inline-block-retina" src="{{ image_path }}good-living-dewnr-logotype.svg"></a>
 
         </div><!-- /site-header__group -->
 
