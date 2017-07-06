@@ -1,0 +1,24 @@
+{% extends 'layouts/master.nunjucks' %}
+
+
+
+
+
+{% block content %}
+
+    <header class="u-visually-hidden">
+        <h1>Search</h1>
+    </header>
+
+
+    <div class="search-module">
+        <label class="u-visually-hidden">Keyword </label><input name="ctl02$phBodyTop78" type="text" id="ctl02_phBodyTop78" class="inputBox" />
+        <input type="submit" name="ctl02$phBodyTop125" value="Search" id="ctl02_phBodyTop125" />
+    </div>
+
+
+    {% include "shared/posts.nunjucks" %}
+
+    {% include "shared/site-pagination.nunjucks" %}
+
+{% endblock %}
