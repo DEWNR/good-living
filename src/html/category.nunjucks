@@ -1,0 +1,18 @@
+{% extends 'layouts/master.nunjucks' %}
+
+
+
+
+
+{% block content %}
+
+    <header class="category__header">
+        <br class="category__space">
+        <h1>See and do</h1>
+    </header>
+
+    {% include "shared/posts.nunjucks" %}
+
+    {% include "shared/site-pagination.nunjucks" %}
+
+{% endblock %}
