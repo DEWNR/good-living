@@ -51,7 +51,7 @@
     /*img*/.#{$sagovau-namespace}navigation-tile__image {
         $gradient-height:       3 * $sagovau-spacing-unit-base;
         $padding-height:        12 * $sagovau-spacing-unit-base;
-        $width:                 ($sagovau-max-width - 3 * $sagovau-spacing-unit-base--small)/4; /* [1] - assumes 4 column layout with small gutters */
+        $width:                 ($sagovau-max-width - 3 * $sagovau-spacing-unit-base--small)/2; /* [1] - assumes 2 column layout with small gutters */
         background: {
             color:              $sagovau-color-brand-secondary--light;  // Provide background color so layout makes sense while images are loading
             position:           center;
@@ -89,7 +89,7 @@
 
         .#{$sagovau-namespace}navigation-tile--small & {
             $padding-height:    10 * $sagovau-spacing-unit-base;
-            $width:             ($sagovau-max-width - 5 * $sagovau-spacing-unit-base--small)/6; /* [1] - assumes 6 column layout with small gutters */
+            $width:             ($sagovau-max-width - 5 * $sagovau-spacing-unit-base--small)/3; /* [1] - assumes 3 column layout with small gutters */
             padding-bottom:     $padding-height/$width * 100%;  /* [1] - simplified */
             padding-bottom:     calc(#{($padding-height - $gradient-height)/$width * 100%} + 30px);  /* [1] */
         }

@@ -25,7 +25,7 @@
         // Set the default number of posts to load at a time. This can be
         // controlled via HTML using data-ng-init.
 
-        this.postIncrement = 10;
+        this.postIncrement = 9;
 
 
         // Set the number of posts that will be loaded
