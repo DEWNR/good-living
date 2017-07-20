@@ -20,9 +20,13 @@
     }
     color:                  $sagovau-color-text-base;
     display:                inline-block;  /* [1] */
-    margin-bottom:          $sagovau-spacing-unit-base;
+    margin-bottom:          0;
     text-decoration:        none;
     width:                  100%;
+
+    &.navigation-tile--huge {
+        margin-bottom: $sagovau-spacing-unit-base;
+    }
 
     &:hover {
         text-decoration:    underline;
@@ -49,6 +53,10 @@
      */
 
     /*img*/.#{$sagovau-namespace}navigation-tile__image {
+        max-width: 100%;
+    }
+
+    .navigation-tile--huge /*img*/.#{$sagovau-namespace}navigation-tile__image {
         $gradient-height:       3 * $sagovau-spacing-unit-base;
         $padding-height:        12 * $sagovau-spacing-unit-base;
         $width:                 ($sagovau-max-width - 3 * $sagovau-spacing-unit-base--small)/2; /* [1] - assumes 2 column layout with small gutters */
@@ -159,6 +167,7 @@
 
         /*h2, h3*/.#{$sagovau-namespace}navigation-tile__title {
             @extend %delta;
+            font-size: 1.1em;
             color:          $sagovau-color-text-base;
             margin-bottom:  7px;
             line-height: 1.2;

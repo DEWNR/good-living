@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body ng-app="myApp">
+
+        {% raw %}
+        <div class="" ng-controller="LazyLoadCtrl as vm">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="list-group">
+                <a href="#" class="list-group-item" ng-repeat="headline in vm.headlines">
+                  <small class="pull-right">{{ headline.published }}</small>
+                  <h5>{{ headline.title}}</h5>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 text-center">
+              <button type="button" class="btn btn-primary" ng-click="vm.getHeadlines(vm.numPerLoad, vm.headlines.length)" ng-if="vm.more">Load {{vm.numPerLoad}} More</button>
+              <alert type="{{vm.alert.type}}" close="vm.closeAlert()" ng-if="!vm.more && vm.alert != null">{{vm.alert.msg}}</alert>
+            </div>
+          </div>
+        </div>
+        {% endraw %}
+
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.28/angular.min.js"></script>
+
+        <script>
+            var myApp = angular.module('myApp', [])
+              .controller('LazyLoadCtrl', function($scope, $http) {
+
+                var vm = this;
+
+                vm.alert = {
+                  type: 'warning',
+                  msg: 'There are no more results.'
+                };
+                vm.closeAlert = closeAlert;
+                vm.headlines = [];
+                vm.getHeadlines = getHeadlines;
+                vm.more = true;
+                vm.numPerLoad = 5;
+
+                function closeAlert() {
+                  vm.alert = null;
+                }
+
+                function getHeadlines(limit, offset) {
+                  var limit = limit || vm.numPerLoad;
+                  var offset = offset || 0;
+                  $http.get('data/posts.json').then(
+                    function(response) {
+
+                      var data = angular.fromJson(response.data);
+                      var i = 0;
+
+                      if (Object.keys(data).length < limit + 1) {
+                        vm.more = false;
+                      }
+                      angular.forEach(data, function(value, key) {
+                        if (i == limit) {
+                          return false;
+                        }
+                        vm.headlines.push(value);
+                        i++;
+                      });
+                    },
+                    function(error) {}
+                  )
+                }
+
+                getHeadlines();
+
+              })
+
+
+        </script>
+
+    </body>
+</html>

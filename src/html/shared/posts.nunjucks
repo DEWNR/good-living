@@ -4,7 +4,7 @@
     <ul class="layout  layout--small">
 
             <!-- Start layout items
-    --><li class="layout__item  u-1-of-2  u-1-of-3-small-and-up  u-1-of-4-large-and-up  u-1-of-5-huge">
+    --><li class="layout__item  u-1-of-1  u-1-of-2-small-and-up  u-1-of-3-large-and-up">
 
         <a href="#" class="navigation-tile  navigation-tile--small">
 
@@ -24,7 +24,7 @@
 
         </a><!-- /navigation-tile -->
 
-    </li><!-- /layout__item--><li class="layout__item  u-1-of-2  u-1-of-3-small-and-up  u-1-of-4-large-and-up  u-1-of-5-huge">
+    </li><!-- /layout__item--><li class="layout__item  u-1-of-1  u-1-of-2-small-and-up  u-1-of-3-large-and-up">
 
         <a href="#" class="navigation-tile  navigation-tile--small">
 
@@ -44,7 +44,7 @@
 
         </a><!-- /navigation-tile -->
 
-    </li><!-- /layout__item--><li class="layout__item  u-1-of-2  u-1-of-3-small-and-up  u-1-of-4-large-and-up  u-1-of-5-huge">
+    </li><!-- /layout__item--><li class="layout__item  u-1-of-1  u-1-of-2-small-and-up  u-1-of-3-large-and-up">
 
         <a href="#" class="navigation-tile  navigation-tile--small">
 
@@ -64,7 +64,7 @@
 
         </a><!-- /navigation-tile -->
 
-    </li><!-- /layout__item--><li class="layout__item  u-1-of-2  u-1-of-3-small-and-up  u-1-of-4-large-and-up  u-1-of-5-huge">
+    </li><!-- /layout__item--><li class="layout__item  u-1-of-1  u-1-of-2-small-and-up  u-1-of-3-large-and-up">
 
         <a href="#" class="navigation-tile  navigation-tile--small">
 
@@ -84,7 +84,7 @@
 
         </a><!-- /navigation-tile -->
 
-    </li><!-- /layout__item--><li class="layout__item  u-1-of-2  u-1-of-3-small-and-up  u-1-of-4-large-and-up  u-1-of-5-huge">
+    </li><!-- /layout__item--><li class="layout__item  u-1-of-1  u-1-of-2-small-and-up  u-1-of-3-large-and-up">
 
         <a href="#" class="navigation-tile  navigation-tile--small">
 
@@ -104,7 +104,7 @@
 
         </a><!-- /navigation-tile -->
 
-    </li><!-- /layout__item--><li class="layout__item  u-1-of-2  u-1-of-3-small-and-up  u-1-of-4-large-and-up  u-1-of-5-huge">
+    </li><!-- /layout__item--><li class="layout__item  u-1-of-1  u-1-of-2-small-and-up  u-1-of-3-large-and-up">
 
         <a href="#" class="navigation-tile  navigation-tile--small">
 
@@ -124,7 +124,7 @@
 
         </a><!-- /navigation-tile -->
 
-    </li><!-- /layout__item--><li class="layout__item  u-1-of-2  u-1-of-3-small-and-up  u-1-of-4-large-and-up  u-1-of-5-huge">
+    </li><!-- /layout__item--><li class="layout__item  u-1-of-1  u-1-of-2-small-and-up  u-1-of-3-large-and-up">
 
         <a href="#" class="navigation-tile  navigation-tile--small">
 
@@ -144,7 +144,7 @@
 
         </a><!-- /navigation-tile -->
 
-    </li><!-- /layout__item--><li class="layout__item  u-1-of-2  u-1-of-3-small-and-up  u-1-of-4-large-and-up  u-1-of-5-huge">
+    </li><!-- /layout__item--><li class="layout__item  u-1-of-1  u-1-of-2-small-and-up  u-1-of-3-large-and-up">
 
         <a href="#" class="navigation-tile  navigation-tile--small">
 
@@ -164,7 +164,7 @@
 
         </a><!-- /navigation-tile -->
 
-    </li><!-- /layout__item--><li class="layout__item  u-1-of-2  u-1-of-3-small-and-up  u-1-of-4-large-and-up  u-1-of-5-huge">
+    </li><!-- /layout__item--><li class="layout__item  u-1-of-1  u-1-of-2-small-and-up  u-1-of-3-large-and-up">
 
         <a href="#" class="navigation-tile  navigation-tile--small">
 
@@ -184,7 +184,7 @@
 
         </a><!-- /navigation-tile -->
 
-    </li><!-- /layout__item--><li class="layout__item  u-1-of-2  u-1-of-3-small-and-up  u-1-of-4-large-and-up  u-1-of-5-huge">
+    </li><!-- /layout__item--><li class="layout__item  u-1-of-1  u-1-of-2-small-and-up  u-1-of-3-large-and-up">
 
         <a href="#" class="navigation-tile  navigation-tile--small">
 

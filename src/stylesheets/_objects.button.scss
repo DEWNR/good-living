@@ -176,3 +176,9 @@ $sagovau-enable-button--inactive:                  false !default; // add transp
     }
 
 }
+
+.button--more {
+    margin: $sagovau-spacing-unit-base auto;
+    padding: $sagovau-spacing-unit-base/2 $sagovau-spacing-unit-base*3;
+    outline: 0;
+}

@@ -191,9 +191,6 @@
         {% include "shared/site-header.nunjucks" %}
 
 
-        {% include "shared/primary-navigation.nunjucks" %}
-
-
         <!-- Main content -->
 
         <main class="wrapper  wrapper--ph-small" role="main">

@@ -8,8 +8,8 @@
 
 /*header*/.#{$sagovau-namespace}site-header {
     @extend %#{$sagovau-namespace}justify;
-    height:     6.5 * $sagovau-spacing-unit-base;
     padding: $sagovau-spacing-unit-base;
+    text-align: center;
 }
 
     /**
@@ -47,6 +47,13 @@
         @include media-query(huge) {
             display:        inline-block;
         }
+    }
+
+    .#{$sagovau-namespace}site-header__item--logo {
+        display: inline-block;
+        max-height: none;
+        margin: 0 auto;
+        width: 300px;
     }
 
     // Size the menu icon appropriately, hide from print and browsers without
