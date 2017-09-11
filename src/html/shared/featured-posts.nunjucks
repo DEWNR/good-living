@@ -18,6 +18,40 @@
 
     </a><!-- /navigation-tile -->
 
+
+
+    <div class="layout  layout--small">
+
+        <a href="http://www.environment.sa.gov.au/goodliving/featured-posts/reusable-cups-adelaide-discount" class="navigation-tile  navigation-tile--large  layout__item    u-1-of-2-large-and-up">
+
+            <img alt="" class="navigation-tile__image  navigation-tile__image--4f2d1117-2c13-4ef5-9ae3-d4af52c0cc05" src="http://www.environment.sa.gov.au/files/sharedassets/good_living/images/content/2017/01/reusable_cups/header-large-final.jpg?w=680" style="background-image:url(http://www.environment.sa.gov.au/files/sharedassets/good_living/images/content/2017/01/reusable_cups/header-large-final.jpg?w=680);">
+
+            <div class="navigation-tile__text">
+
+                <h3 class="navigation-tile__title">Adelaide cafés that reward your eco-friendly coffee habit</h3>
+
+                <p>Lots of cafés are offering BYO cup discounts. Here’s where you can save more than just the environment.</p>
+
+            </div><!-- /navigation-tile__text -->
+
+        </a><!-- /navigation-tile
+
+        --><a href="http://www.environment.sa.gov.au/goodliving/featured-posts/10-things-belair" class="navigation-tile  navigation-tile--large  layout__item    u-1-of-2-large-and-up">
+
+            <img alt="" class="navigation-tile__image  navigation-tile__image--bf5bed27-8598-4fd0-91e9-35b55b234a3a" src="http://www.environment.sa.gov.au/files/sharedassets/good_living/images/content/2017/07/belair-large.jpg?w=680" style="background-image:url(http://www.environment.sa.gov.au/files/sharedassets/good_living/images/content/2017/07/belair-large.jpg?w=680);">
+
+            <div class="navigation-tile__text">
+
+                <h3 class="navigation-tile__title">10 things to see and do at Belair National Park</h3>
+
+                <p>There’s so much to discover at this history-rich park. Let these insider tips guide you on your next adventure.</p>
+
+            </div><!-- /navigation-tile__text -->
+
+        </a><!-- /navigation-tile -->
+    </div>
+
+
 </section><!-- /js-carousel -->
 
 <!-- End featured posts -->

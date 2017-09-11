@@ -52,8 +52,12 @@
      *    gradient height.
      */
 
-    /*img*/.#{$sagovau-namespace}navigation-tile__image {
+    /*img*/.#{$sagovau-namespace}navigation-tile__image,
+    /*img*/.#{$sagovau-namespace}navigation-tile__image[width],
+    /*img*/.#{$sagovau-namespace}navigation-tile__image[height] {
         max-width: 100%;
+        height: auto;
+        width: 100%;
     }
 
     .navigation-tile--huge /*img*/.#{$sagovau-namespace}navigation-tile__image {
