@@ -29,7 +29,7 @@
     // Hide from print and as the screen shrinks.
 
     .#{$sagovau-namespace}site-header__item--social {
-        @extend %#{$sagovau-namespace}no-print;
+        @extend %#{$sagovau-namespace}u-no-print;
         display:            none;
 
         @include media-query(medium-and-up) {
@@ -53,8 +53,8 @@
     // JavaScript enabled.
 
     /*button*/.#{$sagovau-namespace}site-header__item--menu {
-        @extend %#{$sagovau-namespace}no-print;
-        @extend %#{$sagovau-namespace}js-only;
+        @extend %#{$sagovau-namespace}u-no-print;
+        @extend %#{$sagovau-namespace}u-js-only;
         background: transparent;
         border:     none;
         height:     2 * $sagovau-spacing-unit-base;

@@ -145,6 +145,17 @@
 @import "inuit-responsive-spacing/_trumps.spacing-responsive.scss";
 @import "inuit-widths/_trumps.widths.scss";
 @import "inuit-responsive-widths/_trumps.widths-responsive.scss";
-@import "dewnr-bedrock/sass/_trumps.angularjs.scss";
+@import "trumps.angularjs.scss";
 @import "dewnr-bedrock/sass/_trumps.color-schemes.scss";
 @import "dewnr-bedrock/sass/_trumps.display-helpers.scss";
+
+
+/* = Quick fix = */
+// when js disabled hide these elements
+.no-js .js-only {
+    display: none;
+}
+// when js hides element when js enabled
+.js .no-js {
+    display: none;
+}

@@ -9,7 +9,7 @@
 $sagovau-social-icon-types:     twitter facebook email print !default;
 
 .#{$sagovau-namespace}social {
-    @extend %#{$sagovau-namespace}no-print;
+    @extend %#{$sagovau-namespace}u-no-print;
     color: $sagovau-color-brand-secondary;
     text-align: right;
     margin-left: $sagovau-spacing-unit-base--small;

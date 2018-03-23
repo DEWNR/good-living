@@ -32,11 +32,11 @@ $sagovau-navigation-width:  320px !default;
     transition:         margin-left $sagovau-transition-time, box-shadow $sagovau-transition-time;  /* [5] */
     width:              $sagovau-navigation-width;
     z-index:            9999;
-    
-    @extend %#{$sagovau-namespace}no-print;
-    
+
+    @extend %#{$sagovau-namespace}u-no-print;
+
     // Add fallback for browsers that don't have JavaScript enabled.
-    
+
     .no-js & {
         @extend %#{$sagovau-namespace}wrapper;
 
@@ -51,14 +51,14 @@ $sagovau-navigation-width:  320px !default;
     box-shadow: 0 0 $sagovau-spacing-unit-base--small rgba(0,0,0,0.5); /* [4] */
     margin-left:    0;  /* [4] */
 }
-    
-    
+
+
     /*ul*/.#{$sagovau-namespace}primary-navigation__content {
         color:              $sagovau-color-text-reverse;
         font-weight:        bold;
         list-style:         none;   /* [1] */
         margin:             0;      /* [1] */
-        
+
         /**
          * Add extra styling for browsers with JavaScript enabled.
          *
@@ -66,37 +66,37 @@ $sagovau-navigation-width:  320px !default;
          *
          * 2. Make sure the list's content doesn't overlap with the close button.
          */
-        
+
         .js & {
             min-height:     100%;   /* [1] */
             padding:        $sagovau-spacing-unit-base--small;  /* [1] */
             padding-right:  2 * $sagovau-spacing-unit-base;  /* [2] */
         }
     }
-    
+
         /*li*/.#{$sagovau-namespace}primary-navigation__item {
-        
+
             & + & {
                 border-top:  1px solid $sagovau-color-text-reverse;
             }
-            
+
         }
-            
+
             // Style the links as touch-friendly menu items
-            
+
             /*a*/.#{$sagovau-namespace}primary-navigation__link {
                 color:                  $sagovau-color-text-reverse;
                 display:                block;
                 padding:                $sagovau-spacing-unit-base--small;
                 text-decoration:        none;
-                
+
                 &:hover {
                     text-decoration:    underline;
                 }
             }
-    
+
     .#{$sagovau-namespace}primary-navigation__close {
-        @extend %#{$sagovau-namespace}js-only;  // Only display the close button in JavaScript-enabled browsers
+        @extend %#{$sagovau-namespace}u-js-only;  // Only display the close button in JavaScript-enabled browsers
         cursor:     pointer;
         display:    block;
         position:   absolute;
