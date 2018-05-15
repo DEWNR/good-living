@@ -37,8 +37,8 @@ $('[data-js=carousel]').owlCarousel({
 
         for (var i = 0; i < this.posts.length; i++) {
             // Remove "http://"
-            this.posts[i].image = this.posts[i].image.replace(/^http\:\/\//, "");
-            this.posts[i].url = this.posts[i].url.replace(/^http\:\/\//, "");
+            this.posts[i].image = this.posts[i].image.replace(/^https{0,1}\:\/\//, "");
+            this.posts[i].url = this.posts[i].url.replace(/^https{0,1}\:\/\//, "");
 
             // Change "/" at the start of links to "www.environment.sa.gov.au/"
             this.posts[i].image = this.posts[i].image.replace(/^\//, "www.environment.sa.gov.au/");
