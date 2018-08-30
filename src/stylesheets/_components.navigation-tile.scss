@@ -1,0 +1,223 @@
+/*------------------------------------*\
+    #navigation-tile
+\*------------------------------------*/
+
+/**
+ * Reusable styling for the 'Good Living' navigation images. Uses
+ * Modernizr to display CSS gradients where possible.
+ */
+
+/**
+ * 1. Use inline-block so the tile is compatible with inuitcss' grid system.
+ */
+
+/*a*/.#{$sagovau-namespace}navigation-tile {
+    background: {
+        clip:               content-box;
+        position:           center top;
+        repeat:             no-repeat;
+        size:               100% auto;
+    }
+    color:                  $sagovau-color-text-base;
+    display:                inline-block;  /* [1] */
+    margin-bottom:          $sagovau-spacing-unit-base;
+    text-decoration:        none;
+    width:                  100%;
+
+    &:hover {
+        text-decoration:    underline;
+    }
+
+    &--large {
+        float: left;
+    }
+
+    @extend %#{$sagovau-namespace}u-no-print;
+
+}
+
+
+    /**
+     * Although this is (nominally) an img element, this is purely for
+     * semantics: the visible image is set inline using background-image
+     * to allow easy cropping. See http://csswizardry.com/2013/01/your-logo-is-still-an-image-and-so-is-mine/
+     * for an explanation.)
+     *
+     * 1. Use zero height, 100% width and padding so the element resizes
+     *    responsively. Note the simplified value for browsers that
+     *    don't support calc().
+     *
+     * 2. Use a negative bottom margin to allow the subsequent text
+     *    to overlap. The negative margin should be equal to the text's
+     *    gradient height.
+     */
+
+    /*img*/.#{$sagovau-namespace}navigation-tile__image {
+        $gradient-height:       3 * $sagovau-spacing-unit-base;
+        $padding-height:        12 * $sagovau-spacing-unit-base;
+        $width:                 ($sagovau-max-width - 3 * $sagovau-spacing-unit-base--small)/4; /* [1] - assumes 4 column layout with small gutters */
+        background: {
+            color:              $sagovau-color-brand-secondary--light;  // Provide background color so layout makes sense while images are loading
+            position:           center;
+            repeat:             no-repeat;
+            size:               cover;
+        }
+        display:                block;
+        height:                 0;  /* [1] */
+        margin-bottom:          -$gradient-height;   /* [2] */
+        padding-bottom:         $padding-height/$width * 100%;  /* [1] - simplified */
+        padding-bottom:         calc(#{($padding-height - $gradient-height)/$width * 100%} + #{$gradient-height});  /* [1] */
+        width:                  100%;   /* [1] */
+
+        .#{$sagovau-namespace}navigation-tile--huge &, .#{$sagovau-namespace}navigation-tile--large & {
+            padding-bottom:     90%;  /* [1] - simplified */
+            padding-bottom:     calc(60% + #{$gradient-height});  /* [1] */
+
+            @include media-query(medium-and-up) {
+                $padding-height:    14 * $sagovau-spacing-unit-base;
+                $width:             ($sagovau-max-width - $sagovau-spacing-unit-base--small)/2; /* [1] - assumes 2 column layout with small gutters */
+                padding-bottom:     $padding-height/$width * 100%;  /* [1] - simplified */
+                padding-bottom:     calc(#{($padding-height - $gradient-height)/$width * 100%} + #{$gradient-height});  /* [1] */
+            }
+
+        }
+
+        .#{$sagovau-namespace}navigation-tile--huge & {
+            @include media-query(large-and-up) {
+                $padding-height:    20 * $sagovau-spacing-unit-base;
+                $width:             $sagovau-max-width; /* [1] - assumes full-width layout */
+                padding-bottom:     $padding-height/$width * 100%;  /* [1] - simplified */
+                padding-bottom:     calc(#{($padding-height - $gradient-height)/$width * 100%} + #{$gradient-height});  /* [1] */
+            }
+        }
+
+        .#{$sagovau-namespace}navigation-tile--small & {
+            $padding-height:    10 * $sagovau-spacing-unit-base;
+            $width:             ($sagovau-max-width - 5 * $sagovau-spacing-unit-base--small)/6; /* [1] - assumes 6 column layout with small gutters */
+            padding-bottom:     $padding-height/$width * 100%;  /* [1] - simplified */
+            padding-bottom:     calc(#{($padding-height - $gradient-height)/$width * 100%} + 30px);  /* [1] */
+        }
+
+    }
+
+    /**
+     * Adjust the image position as required
+     */
+
+    /*img*/.#{$sagovau-namespace}navigation-tile__image--left {
+        background-position: left;
+    }
+
+    /*img*/.#{$sagovau-namespace}navigation-tile__image--right {
+        background-position: right;
+    }
+
+
+    /**
+     * 1. Use a PNG background image for browsers that don't support CSS
+     *    gradients.
+     *
+     * 2. Use a CSS gradient for those that do.
+     *
+     * 3. Relatively position the element so the background is displayed
+     *    above the preceding image.
+     *
+     * 4. Make the text slightly wider than the container to fix rendering
+     *    issues on some (high resolution) devices.
+     */
+
+    /*div*/.#{$sagovau-namespace}navigation-tile__text {
+        $gradient-height:   3 * $sagovau-spacing-unit-base;
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAABJCAYAAAD8HkyIAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MDExQzE3RkJBNUFFMTFFNDk5RDE5NTUwRkYwREJENDYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MDExQzE3RkNBNUFFMTFFNDk5RDE5NTUwRkYwREJENDYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowMTFDMTdGOUE1QUUxMUU0OTlEMTk1NTBGRjBEQkQ0NiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowMTFDMTdGQUE1QUUxMUU0OTlEMTk1NTBGRjBEQkQ0NiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PpI9tpcAAACQSURBVHjaPMTrToEBAABQ7/8gUZhEi2VljGlMy4xptVotxlzmkrl/nD/f+XEiQRBcRS5Fw2K61o3iYQklldKt0rpTRlnd60E55fWogp70rKJKKquiqmp6UV0NNfWqN7XUVkdd9fSuD33qS9/60a/+1NdAQ4001kRTzTTXQkut9K+1NtqG7bTXQUedwoKzAAMAE4IWOZrcLi4AAAAASUVORK5CYII=);  /* [1] */
+        background-image:   linear-gradient(rgba(255,255,255,0.65), rgba(255,255,255,1) $gradient-height);    /* [2] */
+        margin-left:        -1px;   /* [4] */
+        min-height:         4 * $sagovau-spacing-unit-base;
+        padding:            $sagovau-spacing-unit-base--small;
+        position:           relative;
+        width:              calc(100% + 2px); /* [4] */
+
+
+        .#{$sagovau-namespace}navigation-tile--huge & {
+            min-height:     3 * $sagovau-spacing-unit-base;
+
+            @include media-query(large-and-up) {
+                @include inuit-font-size($sagovau-font-size-base--large);
+                padding:    $sagovau-spacing-unit-base;
+            }
+
+        }
+
+        .#{$sagovau-namespace}navigation-tile--large & {
+            min-height:     3 * $sagovau-spacing-unit-base;
+        }
+
+        .#{$sagovau-namespace}navigation-tile--small & {
+            min-height:     3 * $sagovau-spacing-unit-base;
+        }
+
+        > :last-child {
+            margin-bottom:  0;
+        }
+
+    }
+
+        /*h2, h3*/.#{$sagovau-namespace}navigation-tile__title {
+            @extend %delta;
+            color:          $sagovau-color-text-base;
+            margin-bottom:  7px;
+            line-height: 1.2;
+
+            .#{$sagovau-namespace}navigation-tile:hover & {
+                text-decoration:    underline;
+            }
+
+            .#{$sagovau-namespace}navigation-tile--large &, .#{$sagovau-namespace}navigation-tile--huge & {
+                @extend %beta;
+                line-height: 1.2;
+            }
+
+            .#{$sagovau-namespace}navigation-tile--huge & {
+
+                @include media-query(large-and-up) {
+
+                    /**
+                     * Mimic h1 settings.
+                     *
+                     * Usually this would be achieved with an extend-only
+                     * selector, but this won't work inside a media query.
+                     * Instead, the settings can be generated using the same
+                     * sort of loop that creates the headings themselves.
+                     **/
+
+                    @each $property, $value in $sagovau-h1-settings {
+
+                        #{$property}: $value;
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        /**
+         * 1. Ensure the details are only displayed on larger devices...
+         *
+         * 2. Except for certain variations.
+         *
+         * 3. Make sure the last item doesn't have unnecessary margins.
+
+        /*div*/.#{$sagovau-namespace}navigation-tile__details {
+            display:        none;   /* [1] */
+            line-height: 1.3;
+
+            @include media-query(medium-and-up) {
+                display:    block;  /* [1] */
+            }
+
+            & > :last-child {
+                margin-bottom: 0;   /* [3] */
+            }
+
+        }

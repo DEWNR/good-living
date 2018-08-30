@@ -1,0 +1,65 @@
+<!-- Site navigation -->
+
+<nav class="primary-navigation" data-js="primary-navigation" role="navigation">
+
+    <ul class="primary-navigation__content">
+
+        <li class="primary-navigation__item"><a class="primary-navigation__link" href="http://www.environment.sa.gov.au/goodliving/home">Home</a></li>
+
+        <li class="primary-navigation__item"><a class="primary-navigation__link" href="http://www.environment.sa.gov.au/goodliving/about">About</a></li>
+
+        <li class="primary-navigation__item"><a class="primary-navigation__link" href="http://www.environment.sa.gov.au/goodliving/search">Search</a></li>
+
+        <style>
+            .categories {
+                color: #d8d2cd;
+                padding: 12px;
+                text-decoration: none;
+            }
+            .categories.primary-navigation__link:hover {
+                text-decoration: none;
+            }
+            .primary-navigation__item > .secondary-navigation__link {
+                padding: 12px;
+                padding-left: 2em;
+                display: block;
+                color: #ffffff;
+                text-decoration: none;
+            }
+            .secondary-navigation__link:hover {
+                text-decoration: underline;
+            }
+        </style>
+        <li class="primary-navigation__item"><span class="categories primary-navigation__link">Categories</span></li>
+
+        <li class="primary-navigation__item"><a class="secondary-navigation__link" href="http://www.environment.sa.gov.au/goodliving/categories/see-and-do">See and do</a></li>
+
+        <li class="primary-navigation__item"><a class="secondary-navigation__link" href="http://www.environment.sa.gov.au/goodliving/categories/learn-and-discover">Learn and discover</a></li>
+
+        <li class="primary-navigation__item"><a class="secondary-navigation__link" href="http://www.environment.sa.gov.au/goodliving/categories/hear-from-the-source">Hear from the source</a></li>
+
+        <li class="primary-navigation__item"><a class="secondary-navigation__link" href="http://www.environment.sa.gov.au/goodliving/categories/get-involved">Get involved</a></li>
+
+        <li class="primary-navigation__item"><a class="secondary-navigation__link" href="http://www.environment.sa.gov.au/goodliving/categories/animal-encounters">Animal encounters</a></li>
+
+
+
+        <li class="primary-navigation__item"><a class="primary-navigation__link" href="http://www.environment.sa.gov.au/goodliving/contact-us">Contact us</a></li>
+
+        <li class="primary-navigation__item"><a class="primary-navigation__link" href="http://www.environment.sa.gov.au/goodliving/subscribe">Subscribe to our newsletter</a></li>
+
+    </ul>
+
+    <svg class="primary-navigation__close" data-js="primary-navigation-close" height="48" version="1.1" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg">
+
+        <circle cx="24" cy="24" r="11" stroke="white" stroke-width="2" fill="none" />
+
+        <line stroke-linecap="round" x1="19" y1="19" x2="29" y2="29" stroke="white" stroke-width="2"/>
+
+        <line stroke-linecap="round" x1="19" y1="29" x2="29" y2="19" stroke="white" stroke-width="2"/>
+
+    </svg>
+
+</nav><!-- /site-navigation -->
+
+<!-- End site navigation -->

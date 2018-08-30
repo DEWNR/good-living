@@ -1,0 +1,50 @@
+<!-- Featured posts -->
+
+<section>
+
+    <h2 class="u-visually-hidden">Featured posts</h2>
+    {% for item in posts %}
+    {# only loop through the first item #}
+    {% if loop.first %}
+    <a href="#" class="navigation-tile  navigation-tile--huge">
+
+        <img alt="" class="navigation-tile__image  navigation-tile__image--0fc33ac0-bea5-4deb-a8c1-1c9027d879b8" src="//www.environment.sa.gov.au/{{ item.image }}" style="background-image:url(//www.environment.sa.gov.au/{{ item.image }});">
+
+        <div class="navigation-tile__text">
+
+            <h3 class="navigation-tile__title beta">{{ item.title }}</h3>
+
+            <p>{{ item.description }}</p>
+
+        </div><!-- /navigation-tile__text -->
+
+    </a><!-- /navigation-tile -->
+    {% endif %}
+    {% endfor %}
+
+    <div class="layout  layout--small">
+
+        {% for item in posts %}
+        {# skip the first item and stop looping when you loop the third item #}
+        {% if loop.index != 1 and loop.index <= 3 %}
+
+        <a href="#" class="navigation-tile  navigation-tile--large  layout__item    u-1-of-2-large-and-up">
+
+            <img alt="" class="navigation-tile__image  navigation-tile__image--f7280b10-b506-488c-996a-051bb91ad480" src="//www.environment.sa.gov.au/{{ item.image }}" style="background-image:url(//www.environment.sa.gov.au/{{ item.image }});">
+
+            <div class="navigation-tile__text">
+
+                <h3 class="navigation-tile__title">{{ item.title }}</h3>
+
+                <p>{{ item.description }}</p>
+
+            </div><!-- /navigation-tile__text -->
+
+        </a>
+        {% endif %}
+        {% endfor %}
+    </div>
+
+</section>
+
+<!-- End featured posts -->

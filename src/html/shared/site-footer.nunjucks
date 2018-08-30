@@ -1,0 +1,51 @@
+<!-- Site footer -->
+
+<footer class="footer  box  color-scheme--brand-reverse" role="contentinfo">
+
+    <div class="footer__content  [ wrapper  wrapper--large-and-up-ph-small ] box__content">
+
+      <a class="footer__item"  href="http://www.environment.sa.gov.au/goodliving"><img src="{{ image_path }}good-living-logotype--reverse.svg" alt="Good Living" style="height: 72px; width: 135px;"></a>
+
+        <div class="[ footer__item  footer__item--text ] [ layout  layout--small  u-2-of-5 ]">
+
+            <div class="layout__item  u-1-of-2">
+
+                <p>The Good Living blog comes to you from the South Australian Department for Environment and Water.</p>
+
+                <p>We are here to help inspire and inform you so you can make a difference in your life and world.</p>
+
+            </div><!-- /layout
+
+         --><div class="layout__item  u-1-of-2">
+
+                <p>We will share stories with you – about people, places, things to do, how things work, our Aboriginal heritage, how you can get involved and what you can do to help.</p>
+
+            </div>
+
+        </div>
+
+        <div class="footer__item  [social  social--reverse ]">
+
+            <span class="social__title">Subscribe:</span>
+
+            <ul class="social__list">
+
+                <li class="social__item"><a aria-label="Subscribe to our newsletter" class="social__link social__link--email" href="http://www.environment.sa.gov.au/goodliving/subscribe" title="Subscribe to our newsletter"></a></li><!-- /social__item -->
+
+            </ul>
+
+        </div><!-- /social -->
+
+        <div class="footer__item  footer__item--partner-logos">
+
+            <a href="http://www.southaustralia.com"><img alt="South Australia" class="u-hidden-retina" src="{{ image_path }}good-living-south-australia-logotype--vertical-reverse.png"><img alt="South Australia" class="u-hidden u-display-inline-block-retina" src="{{ image_path }}good-living-south-australia-logotype--vertical-reverse.svg"></a>
+
+            <a href="http://www.environment.sa.gov.au"><img alt="Department for Environment and Water" class="u-hidden-retina" src="{{ image_path }}good-living-dew-logotype--vertical-reverse.png"><img alt="Department for Environment and Water" class="u-hidden u-display-inline-block-retina" src="{{ image_path }}good-living-dew-logotype--vertical-reverse.svg" style="height: 72px;"></a>
+
+        </div>
+
+    </div><!-- /wrapper -->
+
+</footer>
+
+<!-- End site footer -->

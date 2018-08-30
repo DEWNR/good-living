@@ -1,0 +1,57 @@
+/*------------------------------------*\
+    #PRIMARY SETTINGS
+\*------------------------------------*/
+
+/**
+ * The site's main settings. Builds on the series' main settings.
+ */
+
+// Import the series settings
+
+@import "dewnr-bedrock/sass/_settings.general.scss";
+
+
+
+
+
+/* = Colours = */
+
+$sagovau-color-brand:                   #002855;
+
+$sagovau-color-brand-secondary:         #9E948B;
+
+
+$sagovau-color-text-base:               (#2e2925 + #534e4a)/2;  // Manually calculate a 90% tint by combining the prescribed 100% and 80% values
+
+
+
+
+
+/* = File locations and prefixes = */
+
+$sagovau-path-png: "../images/";
+$sagovau-path-svg: "../images/";
+
+$sagovau-path-fonts: "../fonts/";
+
+$sagovau-path-shared: "/files/templates/00000000-0000-0000-0000-000000000000/f88a7f3c-df7e-430a-825c-24cfa8dec9a8/";
+
+
+$sagovau-file-prefix: "gl";
+
+
+
+
+
+/* = Fonts = */
+
+$sagovau-font-family-highlight:             Dewnrger, "Frutiger W01",Helvetica,Arial,sans-serif;
+
+
+// Only bold Dewnrger font is required
+
+$sagovau-dewnrger-normal-400:           false;
+$sagovau-dewnrger-italic-400:           false;
+
+$sagovau-dewnrger-normal-700:           true;
+$sagovau-dewnrger-italic-700:           false;

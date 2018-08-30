@@ -1,0 +1,29 @@
+<div class="site-pagination">
+
+    <div class="site-pagination__result">
+      <strong>136 Results</strong>, showing 1 to 10
+    </div>
+
+    <div class="site-pagination__jumpto">
+        <strong>(14 pages)</strong> Page:
+        <select name="ctl02$phListFooter408p" id="ctl02_phListFooter408p" title="Please select the page here." class="scSearchInputBox">
+            <option selected="selected" value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+        </select>
+
+        <input type="submit" name="ctl02$phListFooter408t" value="Jump to Page" id="ctl02_phListFooter408t" title="Change page" class="btn_scPagingNonJS_enabled" />
+    </div>
+
+</div>

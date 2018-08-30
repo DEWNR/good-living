@@ -1,0 +1,97 @@
+{% extends 'layouts/master.nunjucks' %}
+
+
+
+
+
+{% block content %}
+
+    <img alt="" class="banner  banner--" src="http://via.placeholder.com/1080x480" style="background-image: url(http://via.placeholder.com/1080x480)">
+
+    <div class="layout  layout--indent">
+
+        <article class="layout__item u-2-of-3-large-and-up  u-3-of-4-huge" role="article">
+
+            <header>
+                <h1>Subscribe to our newsletter</h1>
+            </header>
+
+
+            <p>Subscribe to the Good Living blog e-news and get weekly updates about what&rsquo;s new on the blog and links to the most popular articles.</p>
+
+            <div>
+
+                <div id="campaign-monitor" class="seamless-form  seamless-form--seamless  js-only">
+
+                  <div class="seamless-form__item js-name">
+
+                    <label class="seamless-form__label" for="fieldName">Name</label><!--/seamless-form__label
+
+                 --><input class="seamless-form__input" id="fieldName" name="cm-name" type="text" /><!-- /seamless-form__input -->
+
+                  </div><!-- /seamless-form__item -->
+
+                  <div class="seamless-form__item js-email">
+
+                    <label class="seamless-form__label" for="fieldEmail">Email<span class="se-form-required-asterisk"> * </span> <span class="se-form-required-text">(required)</span></label><!-- /seamless-form__label
+
+                 --><input class="seamless-form__input" id="fieldEmail" name="cm-uytjlrk-uytjlrk" type="text" /><!-- /seamless-form__input
+
+                 --><div class="seamless-form__error  seamless-form__error--inactive">Please enter a valid email address.</div><!-- /seamless-form__error -->
+
+                  </div><!-- /seamless-form__item -->
+
+                  <div class="seamless-form__item">
+
+                    <input type="submit" value="Submit" />
+
+                  </div><!-- /seamless-form__item -->
+
+                </div><!-- /seamless-form -->
+
+
+                <p class="no-js"><a href="https://confirmsubscription.com/h/r/E4B831F2324CE99B" target="_blank">Subscribe to our e-newsletter</a>.</p>
+
+
+                <script type="text/javascript">
+
+                    $("#campaign-monitor input[type='submit']").click(function() {
+
+                        var emailComplete = false, subscribeToComplete = false;
+
+                        var emailRegExp = new RegExp(/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/i);  // RegExp from http://www.regular-expressions.info/email.html
+
+
+                        if (emailRegExp.test($("#fieldEmail").val())) {
+
+                          emailComplete = true;
+
+                          $(".js-email .seamless-form__error").addClass('seamless-form__error--inactive');
+
+                        } else {
+
+                          $(".js-email .seamless-form__error").removeClass('seamless-form__error--inactive');
+
+                        }
+
+
+                        if (emailComplete) {
+
+                          location.href = "http://dewnrcomms.createsend.com/t/r/s/uytjlrk/?"+$("#campaign-monitor input").serialize();
+
+                        }
+
+
+                        return false;
+
+                    });
+
+                </script>
+
+            </div>
+
+        </article>
+
+    </div>
+
+{% endblock %}

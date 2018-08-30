@@ -1,0 +1,14 @@
+{% extends 'layouts/master.nunjucks' %}
+
+
+
+
+
+{% block content %}
+    <h1 class="u-visually-hidden">Good Living</h1>
+
+    {% include "shared/featured-posts.nunjucks" %}
+
+    {% include "shared/recent-posts.nunjucks" %}
+
+{% endblock %}

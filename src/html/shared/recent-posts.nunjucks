@@ -1,0 +1,38 @@
+<!-- Recent posts -->
+
+<nav data-ng-app="postList" data-ng-controller="ListController as list">
+
+    <h2 class="u-visually-hidden">Recent posts</h2>
+
+    <ul class="layout  layout--small">        
+        
+        <li class="layout__item  u-1-of-2  u-1-of-3-small-and-up  u-1-of-4-large-and-up  u-1-of-5-huge" data-ng-cloak data-ng-repeat="post in list.posts | limitTo: list.loadedPostCount+3" ng-if="$index > 2">
+        {% raw %}
+            <a href="#" class="navigation-tile  navigation-tile--small">
+
+                <img alt="" class="navigation-tile__image" data-ng-src="//{{post.image}}?h=270" style="background-image:url(//{{post.image}}?h=270);">
+
+                <div class="navigation-tile__text">
+
+                    <h3 class="navigation-tile__title">{{post.title}}</h3>
+
+                    <div class="navigation-tile__details">
+
+                        <p>{{post.description}}</p>
+
+                    </div>
+
+                </div><!-- /navigation-tile__text -->
+
+            </a><!-- /navigation-tile -->
+        {% endraw %}
+
+        </li><!-- /layout__item -->
+
+    </ul><!-- /layout -->
+
+    <button class="[ button  button--small  color-scheme--brand-secondary-reverse  button--block ] u-1-of-1" data-ng-click="list.loadMore()" data-ng-cloak data-ng-hide="list.maxPostCount <= list.loadedPostCount" type="button"><strong>Load more</strong></button>
+
+</nav>
+
+<!-- End recent posts -->

@@ -1,0 +1,78 @@
+{% extends 'layouts/master.nunjucks' %}
+
+
+
+
+
+{% block content %}
+
+<img alt="" class="banner  banner--" src="http://via.placeholder.com/1080x480" style="background-image: url(http://via.placeholder.com/1080x480)">
+
+<div class="layout  layout--indent">
+
+
+    <article class="post  layout__item u-2-of-3-large-and-up  u-3-of-4-huge" role="article">
+
+
+        <header class="post__header">
+
+            <h1 class="post__title">5 fun things to do in parks these school holidays</h1>
+
+            <ul class="post-details">
+
+                <li class="post-details__item"><time datetime="2017-07-06"> 06 July 2017</time></li>
+
+                <li class="post-details__item  post-details__item--categories"><span class="post-details__category" ><a href="/goodliving/categories/See%20and%20do">See and do</a></span></li>
+
+                <li class="post-details__item  post-details__item--comments"><a href="#disqus_thread">View comments</a></li>
+
+            </ul>
+
+        </header>
+
+
+        {% include "shared/social.nunjucks" %}
+
+
+        <p class="post__intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+
+        <p>Cras eget augue eu lacus ullamcorper molestie et vel elit. Curabitur tincidunt iaculis erat id efficitur. Nunc diam metus, <a href="#">vehicula</a> id efficitur ut, iaculis ut quam. Suspendisse dictum dignissim felis, sed malesuada nisi semper ac. Vestibulum tempor neque nec metus venenatis ullamcorper. Nulla facilisi. Phasellus dictum mattis tellus, eu lobortis eros faucibus ac. Vivamus venenatis, ex vel molestie vestibulum, risus tellus elementum velit, ac accumsan dolor nisi sed enim.</p>
+
+
+        <h4>Vestibulum auctor dapibus neque.</h4>
+        <p>lectus ut lectus dignissim aliquet et quis nibh. Praesent molestie dui vel mattis ornare. Pellentesque <a href="#">eleifend nulla</a> eu sem dapibus, eget luctus leo facilisis. Praesent commodo ante a sem fermentum varius. Cras sit amet scelerisque nisl, nec mattis eros. Nulla facilisi. Donec cursus ut est eu iaculis. Sed dapibus egestas est ut imperdiet.</p>
+
+        <ul>
+           <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+           <li>Aliquam tincidunt mauris eu risus.</li>
+           <li>Vestibulum auctor dapibus neque.</li>
+        </ul>
+
+        <p>Vestibulum elementum efficitur diam, ac <a href="#">efficitur</a> lectus fringilla in. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse maximus, ligula a euismod sodales, lorem sem auctor nulla, quis malesuada tellus orci nec est. Nunc sed leo convallis, luctus diam eu, aliquet nisl. Duis mollis sodales sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sem massa, faucibus blandit dignissim ac, tempor ut mi. Morbi commodo porta purus, id ornare orci sollicitudin in. Fusce malesuada nisl nec ligula finibus, in ornare lorem suscipit. Mauris facilisis non dolor quis placerat.</p>
+
+
+        <div class="call-to-subscribe">
+            <h5>Like what you just read? There’s plenty more where this came from. Make sure you don’t miss a post by
+                <a href="http://www.environment.sa.gov.au/goodliving/subscribe" target="_self">subscribing</a>&nbsp;to Good Living’s weekly e-news.</h5>
+        </div>
+
+
+        {% include "shared/social.nunjucks" %}
+
+        {% include "shared/comments.nunjucks" %}
+
+    </article><!-- /post
+
+
+ --><aside class="layout__item  u-1-of-3-large-and-up  u-1-of-4-huge" role="complementary">
+
+        {% include "shared/related-information.nunjucks" %}
+
+    </aside><!-- /layout__item -->
+
+
+</div><!-- /layout -->
+
+
+{% endblock %}
