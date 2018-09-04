@@ -12,7 +12,6 @@
     "demo": "gulp production && gulp server"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.3.1",
     "dewnr-bedrock": "^0.2.7"
   },
   "devDependencies": {

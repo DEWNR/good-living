@@ -135,6 +135,8 @@
 
         <link href="{{ css_path }}main.css" rel="stylesheet">
 
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+
         <noscript>
 
           <link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/e0cc203f-7221-4daf-a2d5-815483dba107.css">
