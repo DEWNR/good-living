@@ -78,6 +78,11 @@
       "extensions": ["woff2", "woff", "eot", "ttf", "svg"]
     },
 
+    "fontello": {
+      "src": "fontello",
+      "dest": "fonts"
+    },
+
     "svgSprite": {
       "src": "sprites",
       "dest": "images",

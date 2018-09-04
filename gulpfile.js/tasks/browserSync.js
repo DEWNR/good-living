@@ -1,9 +1,10 @@
-var browserSync = require('browser-sync')
-var config      = require('../config')
-var gulp        = require('gulp')
+const browserSync = require('browser-sync');
+const config      = require('../config');
+const gulp        = require('gulp');
 
-var browserSyncTask = function() {
+const browserSyncTask = () => {
   browserSync.init(config.tasks.browserSync)
-}
+};
+
 gulp.task('browserSync', browserSyncTask)
 module.exports = browserSyncTask

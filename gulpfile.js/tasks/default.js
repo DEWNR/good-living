@@ -1,11 +1,11 @@
-var gulp            = require('gulp')
-var gulpSequence    = require('gulp-sequence')
-var getEnabledTasks = require('../lib/getEnabledTasks')
+const getEnabledTasks = require('../lib/getEnabledTasks');
+const gulpSequence    = require('gulp-sequence');
+const gulp            = require('gulp');
 
-var defaultTask = function(cb) {
-  var tasks = getEnabledTasks('watch')
-  gulpSequence('clean', tasks.assetTasks, tasks.codeTasks, 'static', 'watch', cb)
-}
+const defaultTask = (cb) => {
+  const tasks = getEnabledTasks('watch');
+  gulpSequence('clean', tasks.assetTasks, tasks.codeTasks, 'static', 'watch', cb);
+};
 
 gulp.task('default', defaultTask)
 module.exports = defaultTask
