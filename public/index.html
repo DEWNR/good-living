@@ -184,13 +184,46 @@
 
         <!-- Site header -->
 
-<div class="wrapper  wrapper--large-and-up-ph-small">
+<div class="wrapper  wrapper--ph-small">
 
     <header class="site-header" role="banner">
 
-      <a class="site-header__item  site-header__item--logo" href="http://www.environment.sa.gov.au/goodliving"><img src="images/good-living-logotype.svg" alt="Good Living" style="height: 108px;"></a>
+        <a class="site-header__item  site-header__item--logo" href="http://www.environment.sa.gov.au/goodliving">
+            <img alt="Good Living" class="u-hidden-retina" src="images/good-living-logotype.png">
+            <img alt="Good Living" class="u-hidden u-display-inline-block-retina" src="images/good-living-logotype.svg">
+        </a>
 
-        <button class="site-header__item  site-header__item--menu" data-js="primary-navigation-toggle" title="Navigation menu">
+        
+
+
+        
+        <div class="site-header__item site-header__item--right-stack">
+            <div class="site-header__item  site-header__item--partner-logos">
+
+                <a class="site-header__item  site-header__item--partner-logo" href="http://www.southaustralia.com">
+                    <img alt="South Australia" class="u-hidden-retina" src="images/good-living-south-australia-logotype.png">
+                    <img alt="South Australia" class="u-hidden u-display-inline-block-retina" src="images/good-living-south-australia-logotype.svg">
+                </a>
+
+                <a class="site-header__item  site-header__item--partner-logo" href="http://www.environment.sa.gov.au">
+                    <img alt="Department for Environment and Water" class="u-hidden-retina" src="images/good-living-dew-logotype.png" style="height: 48px;">
+                    <img alt="Department for Environment and Water" class="u-hidden u-display-inline-block-retina" src="images/good-living-dew-logotype.svg" style="height: 48px;">
+                </a>
+
+            </div><!-- /site-header__group -->
+
+            <nav class="site-header__item site-header__item--sub-nav">
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Subscribe</a></li>
+                    <li><a href="http://www.environment.sa.gov.au/goodliving/search" title="Search">Search<i class="fas fa-search" style="margin-left: 10px;"></i></a></li>
+                </ul>
+            </nav>
+      
+        </div>
+
+        <button class="site-header__item  site-header__item--menu  u-hidden-huge" data-js="primary-navigation-toggle" title="Navigation menu">
 
             <svg width="48" height="48" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg">
 
@@ -202,54 +235,11 @@
 
             </svg>
 
-        </button>
-
-
-        <div class="social-wrap">
-
-            <div class="social  site-header__item  site-header__item--social">
-
-                <span class="social__title">Subscribe</span>
-
-                <ul class="social__list">
-
-                    <li class="social__item"><a aria-label="Subscribe to our newsletter" class="social__link social__link--email" href="http://www.environment.sa.gov.au/goodliving/subscribe" title="Subscribe to our newsletter"></a></li><!-- /social__item -->
-
-                </ul>
-
-            </div><!-- /social -->
-
-            <div class="social  site-header__item  site-header__item--social">
-
-                <span class="social__title">Search</span>
-
-                <ul class="social__list">
-
-                    <li class="social__item"><a aria-label="Search" class="social__link social__link--search" href="http://www.environment.sa.gov.au/goodliving/search" title="Search"></a></li><!-- /social__item -->
-
-                </ul>
-
-            </div><!-- /social -->
-
-        </div>
-
-        <div class="site-header__item  site-header__item--partner-logos">
-
-            <a class="site-header__item  site-header__item--partner-logo" href="http://www.southaustralia.com"><img src="images/good-living-south-australia-logotype.svg" alt="South Australia" style="margin-top:-6px;"></a>
-
-          <a class="site-header__item  site-header__item--partner-logo" href="http://www.environment.sa.gov.au" style="margin-top:6px;"><img alt="Department for Environment and Water" class="u-hidden-retina" src="images/good-living-dew-logotype.png" style="height: 48px;"><img alt="Department for Environment and Water" class="u-hidden u-display-inline-block-retina" src="images/good-living-dew-logotype.svg" style="height: 48px;"></a>
-
-        </div><!-- /site-header__group -->
+        </button>       
 
     </header><!-- /site-header -->
 
-</div><!-- /wrapper -->
-
-<!-- End site header -->
-
-
-
-        <!-- Site navigation -->
+    <!-- Site navigation -->
 
 <nav class="primary-navigation" data-js="primary-navigation" role="navigation">
 
@@ -257,31 +247,11 @@
 
         <li class="primary-navigation__item"><a class="primary-navigation__link" href="http://www.environment.sa.gov.au/goodliving/home">Home</a></li>
 
-        <li class="primary-navigation__item"><a class="primary-navigation__link" href="http://www.environment.sa.gov.au/goodliving/about">About</a></li>
+        <li class="primary-navigation__item  u-hidden-large-and-up"><a class="primary-navigation__link" href="http://www.environment.sa.gov.au/goodliving/about">About</a></li>
 
-        <li class="primary-navigation__item"><a class="primary-navigation__link" href="http://www.environment.sa.gov.au/goodliving/search">Search</a></li>
+        <li class="primary-navigation__item  u-hidden-large-and-up"><a class="primary-navigation__link" href="http://www.environment.sa.gov.au/goodliving/search">Search</a></li>
 
-        <style>
-            .categories {
-                color: #d8d2cd;
-                padding: 12px;
-                text-decoration: none;
-            }
-            .categories.primary-navigation__link:hover {
-                text-decoration: none;
-            }
-            .primary-navigation__item > .secondary-navigation__link {
-                padding: 12px;
-                padding-left: 2em;
-                display: block;
-                color: #ffffff;
-                text-decoration: none;
-            }
-            .secondary-navigation__link:hover {
-                text-decoration: underline;
-            }
-        </style>
-        <li class="primary-navigation__item"><span class="categories primary-navigation__link">Categories</span></li>
+        <li class="primary-navigation__item  u-hidden-huge"><span class="categories primary-navigation__link">Categories</span></li>
 
         <li class="primary-navigation__item"><a class="secondary-navigation__link" href="http://www.environment.sa.gov.au/goodliving/categories/see-and-do">See and do</a></li>
 
@@ -293,15 +263,18 @@
 
         <li class="primary-navigation__item"><a class="secondary-navigation__link" href="http://www.environment.sa.gov.au/goodliving/categories/animal-encounters">Animal encounters</a></li>
 
+        <li class="primary-navigation__item  u-hidden-large-and-up"><a class="primary-navigation__link" href="http://www.environment.sa.gov.au/goodliving/contact-us">Contact us</a></li>
 
+        <li class="primary-navigation__item  u-hidden-large-and-up"><a class="primary-navigation__link" href="http://www.environment.sa.gov.au/goodliving/subscribe">Subscribe to our newsletter</a></li>
 
-        <li class="primary-navigation__item"><a class="primary-navigation__link" href="http://www.environment.sa.gov.au/goodliving/contact-us">Contact us</a></li>
-
-        <li class="primary-navigation__item"><a class="primary-navigation__link" href="http://www.environment.sa.gov.au/goodliving/subscribe">Subscribe to our newsletter</a></li>
+        <li class="primary-navigation__item  primary-navigation__item--social">
+            <a class="primary-navigation__link  primary-navigation__link--social" href="#"><i class="fab fa-facebook-square  fa-2x"></i></a>
+            <a class="primary-navigation__link  primary-navigation__link--social" href="#"><i class="fab fa-twitter-square fa-2x" style="margin-left: 10px;"></i></a>
+        </li>
 
     </ul>
 
-    <svg class="primary-navigation__close" data-js="primary-navigation-close" height="48" version="1.1" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg">
+    <svg class="primary-navigation__close  u-hidden-huge" data-js="primary-navigation-close" height="48" version="1.1" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg">
 
         <circle cx="24" cy="24" r="11" stroke="white" stroke-width="2" fill="none" />
 
@@ -315,6 +288,10 @@
 
 <!-- End site navigation -->
 
+
+</div><!-- /wrapper -->
+
+<!-- End site header -->
 
 
         <!-- Main content -->
@@ -2686,7 +2663,7 @@
         
         <!-- Scripts -->
 
-        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.28/angular.min.js"></script>
 
         <script>
@@ -2713,6 +2690,7 @@
             goodliving.posts = (function () {
                 var json = null;
 
+                // using 'async': false will cause a deprecation error
                 $.ajax({
                     'async': false,
                     'global': false,
