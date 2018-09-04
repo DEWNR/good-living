@@ -1,74 +1,127 @@
-/*------------------------------------*\
+/* ------------------------------------ *\
     #SITE-HEADER
-\*------------------------------------*/
+\* ------------------------------------ */
 
 /**
  * Styling for the 'Good Living' site header.
  */
 
-/*header*/.#{$sagovau-namespace}site-header {
-    @extend %#{$sagovau-namespace}justify;
-    height:     6.5 * $sagovau-spacing-unit-base;
-    padding: $sagovau-spacing-unit-base;
+/* header */.#{$sagovau-namespace}site-header {
+    padding: $sagovau-spacing-unit-base 0;
+    display: flex;
+    justify-content: space-between;
 }
 
-    /**
-     * 1. Use inline-block so the items display from left to right.
-     *
-     * 2. Remove any unwanted space below the items caused by inline-block.
-     *
-     * 3. Reverse the margins on right-aligned groups.
-     */
+.#{$sagovau-namespace}site-header__item--logo {
+    max-width: 191px;
+    margin-right: auto;
+}
 
-    .#{$sagovau-namespace}site-header__item {
-        display:        inline-block;   /* [1] */
-        max-height:     3 * $sagovau-spacing-unit-base;
-        vertical-align: middle;    /* [2] */
-    }
+.#{$sagovau-namespace}site-header__item--right-stack {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
-    // Hide from print and as the screen shrinks.
-
-    .#{$sagovau-namespace}site-header__item--social {
-        @extend %#{$sagovau-namespace}u-no-print;
-        display:            none;
-
-        @include media-query(medium-and-up) {
-            display:        inline-block;
+.#{$sagovau-namespace}site-header__item--sub-nav {
+    ul {
+        display: none;
+        
+        @include media-query(large-and-up) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin: auto 0 0;
         }
     }
 
-    .#{$sagovau-namespace}site-header__item--partner-logos {
-        display:            none;
+    li {
+        list-style: none;
+        padding: 0 1.8em;
+        text-align: center;
+        border-right: solid 1px $sagovau-color-brand;
+        height: 0.8em;
+        line-height: 0.8em;
+        
 
-        @media print {
-            display:        inline-block;
+        &:first-child {
+            padding-left: 0;
         }
 
-        @include media-query(huge) {
-            display:        inline-block;
+        &:last-child {
+            border: 0;
+            padding-right: 0;
         }
     }
+
+    a {
+        color: $sagovau-color-brand;
+        text-decoration: none;
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+
+    // force line-height of fontawesome.. 
+    .fas,
+    .fab,
+    .fa {
+        line-height: 0.7em;
+    }
+}
+
+.#{$sagovau-namespace}site-header__item--partner-logos {
+    display: none;
+
+    @media print {
+        display: inline-block;
+    }
+
+    @include media-query(large-and-up) {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+    }
+}
+
+// Hide from print and as the screen shrinks.
+
+.#{$sagovau-namespace}site-header__item--social {
+    @extend %#{$sagovau-namespace}u-no-print;
+    display: none;
+
+    @include media-query(medium-and-up) {
+        display: inline-block;
+    }
+}
+
+// Make sure partner logos are spaced appropriately
+
+/* a */.#{$sagovau-namespace}site-header__item--partner-logo {
+    display: flex;
+    margin-top: auto;
+
+    & + & {
+        margin-left: $sagovau-spacing-unit-base;
+    }
+}
 
     // Size the menu icon appropriately, hide from print and browsers without
     // JavaScript enabled.
 
-    /*button*/.#{$sagovau-namespace}site-header__item--menu {
+    /* button */.#{$sagovau-namespace}site-header__item--menu {
         @extend %#{$sagovau-namespace}u-no-print;
         @extend %#{$sagovau-namespace}u-js-only;
         background: transparent;
-        border:     none;
-        height:     2 * $sagovau-spacing-unit-base;
-        margin-top: $sagovau-spacing-unit-base--small;
-        padding:    0;
-        width:      2 * $sagovau-spacing-unit-base;
-    }
+        border: none;
+        margin: auto 0;
+        height: 2 * $sagovau-spacing-unit-base;
+        padding: 0;
+        width: 2 * $sagovau-spacing-unit-base;
 
-    // Make sure partner logos are spaced appropriately
-
-    /*img*/.#{$sagovau-namespace}site-header__item--partner-logo {
-        max-height:         2 * $sagovau-spacing-unit-base;
-
-        & + & {
-            margin-left:    $sagovau-spacing-unit-base;
+        @include media-query(large-and-up) {
+            margin: auto 0 auto auto;
         }
     }
+

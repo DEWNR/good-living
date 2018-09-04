@@ -1,6 +1,6 @@
-/*------------------------------------*\
+/* ------------------------------------ *\
     #primary-navigation
-\*------------------------------------*/
+\* ------------------------------------ */
 
 /**
  * Styling for the 'Good Living' site navigation menu.
@@ -20,18 +20,18 @@ $sagovau-navigation-width:  320px !default;
  * 5. Use transitions to animate the activation.
  */
 
-/*nav*/.#{$sagovau-namespace}primary-navigation {
-    background-color:   $sagovau-color-brand-secondary;     // Fallback for browsers without RGBA support
-    background-color:   rgba($sagovau-color-brand-secondary, 0.95);
-    bottom:             0;  /* [2] */
-    left:               0;  /* [1] */
-    margin-left:        -$sagovau-navigation-width; /* [3] */
-    margin-right:       0;
-    position:           absolute;  /* [1] */
-    top:                0;  /* [1] */
-    transition:         margin-left $sagovau-transition-time, box-shadow $sagovau-transition-time;  /* [5] */
-    width:              $sagovau-navigation-width;
-    z-index:            9999;
+/* nav */.#{$sagovau-namespace}primary-navigation {
+    background-color: $sagovau-color-brand-secondary;     // Fallback for browsers without RGBA support
+    background-color: rgba($sagovau-color-brand-secondary, 0.95);
+    bottom: 0;                                                                              /* [2] */
+    left: 0;                                                                                /* [1] */
+    margin-left: -$sagovau-navigation-width;                                                /* [3] */
+    margin-right: 0;
+    position: absolute;                                                                     /* [1] */
+    top: 0;                                                                                 /* [1] */
+    transition: margin-left $sagovau-transition-time, box-shadow $sagovau-transition-time;  /* [5] */
+    width: $sagovau-navigation-width;
+    z-index: 9999;
 
     @extend %#{$sagovau-namespace}u-no-print;
 
@@ -41,23 +41,31 @@ $sagovau-navigation-width:  320px !default;
         @extend %#{$sagovau-namespace}wrapper;
 
         margin-bottom: $sagovau-spacing-unit-base;
-        padding:    0 $sagovau-spacing-unit-base--small;
-        position:   relative;
-        width:      100%;
+        padding: 0 $sagovau-spacing-unit-base--small;
+        position: relative;
+        width: 100%;
+    }
+
+
+    @include media-query(huge) {
+        position: relative;
+        width: 100%;
+        margin: 0;
+        background-color: transparent;
     }
 }
 
-/*nav*/.#{$sagovau-namespace}primary-navigation--active {
+/* nav */.#{$sagovau-namespace}primary-navigation--active {
     box-shadow: 0 0 $sagovau-spacing-unit-base--small rgba(0,0,0,0.5); /* [4] */
-    margin-left:    0;  /* [4] */
+    margin-left: 0;                                                      /* [4] */
 }
 
 
-    /*ul*/.#{$sagovau-namespace}primary-navigation__content {
-        color:              $sagovau-color-text-reverse;
-        font-weight:        bold;
-        list-style:         none;   /* [1] */
-        margin:             0;      /* [1] */
+    /* ul */.#{$sagovau-namespace}primary-navigation__content {
+        color: $sagovau-color-text-reverse;
+        font-weight: bold;
+        list-style: none;   /* [1] */
+        margin: 0;          /* [1] */
 
         /**
          * Add extra styling for browsers with JavaScript enabled.
@@ -68,38 +76,124 @@ $sagovau-navigation-width:  320px !default;
          */
 
         .js & {
-            min-height:     100%;   /* [1] */
-            padding:        $sagovau-spacing-unit-base--small;  /* [1] */
-            padding-right:  2 * $sagovau-spacing-unit-base;  /* [2] */
+            min-height: 100%;                               /* [1] */
+            padding: $sagovau-spacing-unit-base--small;     /* [1] */
+            padding-right: 2 * $sagovau-spacing-unit-base;  /* [2] */
+        }
+
+        @include media-query(huge) {
+            color: $sagovau-color-brand;
+            display: flex;
+            align-content: center;
+
+            .js & {
+                padding: $sagovau-spacing-unit-base--small 0 $sagovau-spacing-unit-base 0;
+            }
         }
     }
 
-        /*li*/.#{$sagovau-namespace}primary-navigation__item {
+    /* li */.#{$sagovau-namespace}primary-navigation__item {
 
-            & + & {
-                border-top:  1px solid $sagovau-color-text-reverse;
+        @include media-query(huge) {
+            display: inline-block;
+            flex-shrink: 1;
+            align-self: center;
+            padding: 0 calc(2.93% - 1px);
+            margin: 0;
+            border-right: 1px solid $sagovau-color-brand;
+            height: 0.8em;
+            line-height: 0.8em;
+
+            &:first-child {
+                padding-left: 0;
             }
 
+            &--social {
+                margin-left: auto;
+                padding: 0;
+                border: 0;
+            }
         }
 
-            // Style the links as touch-friendly menu items
+        
 
-            /*a*/.#{$sagovau-namespace}primary-navigation__link {
-                color:                  $sagovau-color-text-reverse;
-                display:                block;
-                padding:                $sagovau-spacing-unit-base--small;
-                text-decoration:        none;
+        & + & {
+            border-top: 1px solid $sagovau-color-text-reverse;
 
-                &:hover {
-                    text-decoration:    underline;
+            @include media-query(huge) {
+                border-top: 0;
+            }
+        }
+
+    }
+
+    // Style the links as touch-friendly menu items
+
+    /* a */.#{$sagovau-namespace}primary-navigation__link,
+    .#{$sagovau-namespace}secondary-navigation__link {
+        color: $sagovau-color-text-reverse;
+        display: block;
+        padding: $sagovau-spacing-unit-base--small;
+        text-decoration: none;
+
+        &--social {
+            display: inline-block;
+        }
+
+        @include media-query(huge) {
+            color: $sagovau-color-brand;
+            display: inline-block;
+            padding: 0;
+            font-weight: normal;
+
+            &--social {
+                border: 0;
+                vertical-align: middle;
+                padding: 0;
+                // force line-height of fontawesome.. 
+                .fas,
+                .fab,
+                .fa {
+                    line-height: 0.4em;
                 }
             }
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    @media screen and(max-width: 1023px) {
+        .#{$sagovau-namespace}categories {
+            color: #d8d2cd;
+            padding: 12px;
+            text-decoration: none;
+        }
+    
+        .#{$sagovau-namespace}categories.primary-navigation__link:hover {
+            text-decoration: none;
+        }
+    
+        .#{$sagovau-namespace}primary-navigation__item > .secondary-navigation__link {
+            padding: 12px;
+            padding-left: 2em;
+            display: block;
+            color: #ffffff;
+            text-decoration: none;
+        }
+    
+        .#{$sagovau-namespace}secondary-navigation__link:hover {
+            text-decoration: underline;
+        }
+    }
+    
 
     .#{$sagovau-namespace}primary-navigation__close {
         @extend %#{$sagovau-namespace}u-js-only;  // Only display the close button in JavaScript-enabled browsers
-        cursor:     pointer;
-        display:    block;
-        position:   absolute;
-        right:      0;
-        top:        0;
+        cursor: pointer;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
     }
