@@ -1,6 +1,6 @@
 <!-- Recent posts -->
 
-<nav data-ng-app="postList" data-ng-controller="ListController as list">
+<nav data-ng-app="postList" data-ng-controller="ListController as list" style="clear:both;">
 
     <h2 class="u-visually-hidden">Recent posts</h2>
 
@@ -11,7 +11,7 @@
             <a href="#" class="navigation-tile  navigation-tile--small">
 
                 <img alt="" class="navigation-tile__image" data-ng-src="//{{post.image}}?h=270" style="background-image:url(//{{post.image}}?h=270);">
-
+g
                 <div class="navigation-tile__text">
 
                     <h3 class="navigation-tile__title">{{post.title}}</h3>
