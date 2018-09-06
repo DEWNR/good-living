@@ -21,7 +21,7 @@ const cssTask = () => {
     .pipe(gulpif(!global.production, sourcemaps.init()))
     .pipe(sass(config.tasks.css.sass))
     .on('error', handleErrors)
-    .pipe(autoprefixer(config.tasks.css.autoprefixer))
+    .pipe(autoprefixer({grid: true}))
     .pipe(gulpif(global.production, cssnano({autoprefixer: false, zindex: false})))
     .pipe(gulpif(!global.production, sourcemaps.write()))
     .pipe(gulp.dest(paths.dest))

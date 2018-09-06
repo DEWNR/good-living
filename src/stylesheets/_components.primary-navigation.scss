@@ -23,12 +23,12 @@ $sagovau-navigation-width:  320px !default;
 /* nav */.#{$sagovau-namespace}primary-navigation {
     background-color: $sagovau-color-brand-secondary;     // Fallback for browsers without RGBA support
     background-color: rgba($sagovau-color-brand-secondary, 0.95);
-    bottom: 0;                                                                              /* [2] */
-    left: 0;                                                                                /* [1] */
-    margin-left: -$sagovau-navigation-width;                                                /* [3] */
+    bottom: 0; /* [2] */
+    left: 0;   /* [1] */
+    margin-left: -$sagovau-navigation-width; /* [3] */
     margin-right: 0;
-    position: absolute;                                                                     /* [1] */
-    top: 0;                                                                                 /* [1] */
+    position: absolute; /* [1] */
+    top: 0; /* [1] */
     transition: margin-left $sagovau-transition-time, box-shadow $sagovau-transition-time;  /* [5] */
     width: $sagovau-navigation-width;
     z-index: 9999;
@@ -61,139 +61,138 @@ $sagovau-navigation-width:  320px !default;
 }
 
 
-    /* ul */.#{$sagovau-namespace}primary-navigation__content {
-        color: $sagovau-color-text-reverse;
-        font-weight: bold;
-        list-style: none;   /* [1] */
-        margin: 0;          /* [1] */
+/* ul */.#{$sagovau-namespace}primary-navigation__content {
+    color: $sagovau-color-text-reverse;
+    font-weight: bold;
+    list-style: none;   /* [1] */
+    margin: 0;          /* [1] */
 
-        /**
-         * Add extra styling for browsers with JavaScript enabled.
-         *
-         * 1. Display as a full-height flyout menu.
-         *
-         * 2. Make sure the list's content doesn't overlap with the close button.
-         */
+    /*
+    * Add extra styling for browsers with JavaScript enabled.
+    *
+    * 1. Display as a full-height flyout menu.
+    *
+    * 2. Make sure the list's content doesn't overlap with the close button.
+    */
+
+    .js & {
+        min-height: 100%;                               /* [1] */
+        padding: $sagovau-spacing-unit-base--small;     /* [1] */
+        padding-right: 2 * $sagovau-spacing-unit-base;  /* [2] */
+    }
+
+    @include media-query(huge) {
+        color: $sagovau-color-brand;
+        display: grid;        
+        grid-template-columns: 73px repeat(5, auto) 100px;
 
         .js & {
-            min-height: 100%;                               /* [1] */
-            padding: $sagovau-spacing-unit-base--small;     /* [1] */
-            padding-right: 2 * $sagovau-spacing-unit-base;  /* [2] */
-        }
-
-        @include media-query(huge) {
-            color: $sagovau-color-brand;
-            display: flex;
-            align-content: center;
-
-            .js & {
-                padding: $sagovau-spacing-unit-base--small 0 $sagovau-spacing-unit-base 0;
-            }
+            padding: $sagovau-spacing-unit-base--small 0 $sagovau-spacing-unit-base 0;
         }
     }
+}
 
-    /* li */.#{$sagovau-namespace}primary-navigation__item {
+/* li */.#{$sagovau-namespace}primary-navigation__item {
 
-        @include media-query(huge) {
-            display: inline-block;
-            flex-shrink: 1;
-            align-self: center;
-            padding: 0 calc(2.93% - 1px);
-            margin: 0;
-            border-right: 1px solid $sagovau-color-brand;
-            height: 0.8em;
-            line-height: 0.8em;
+    @include media-query(huge) {
+        text-align: center;
 
-            &:first-child {
-                padding-left: 0;
-            }
-
-            &--social {
-                margin-left: auto;
-                padding: 0;
-                border: 0;
-            }
+        &:first-child {
+            text-align: left;
         }
-
-        
-
-        & + & {
-            border-top: 1px solid $sagovau-color-text-reverse;
-
-            @include media-query(huge) {
-                border-top: 0;
-            }
-        }
-
-    }
-
-    // Style the links as touch-friendly menu items
-
-    /* a */.#{$sagovau-namespace}primary-navigation__link,
-    .#{$sagovau-namespace}secondary-navigation__link {
-        color: $sagovau-color-text-reverse;
-        display: block;
-        padding: $sagovau-spacing-unit-base--small;
-        text-decoration: none;
 
         &--social {
-            display: inline-block;
+            text-align: right;
+            border: 0;
         }
+    }
+
+    & + & {
+        border-top: 1px solid $sagovau-color-text-reverse;
 
         @include media-query(huge) {
-            color: $sagovau-color-brand;
-            display: inline-block;
-            padding: 0;
-            font-weight: normal;
+            border-top: 0;
+        }
+    }
 
-            &--social {
-                border: 0;
-                vertical-align: middle;
-                padding: 0;
-                // force line-height of fontawesome.. 
-                .fas,
-                .fab,
-                .fa {
-                    line-height: 0.4em;
-                }
+}
+
+// Style the links as touch-friendly menu items
+
+/* a */.#{$sagovau-namespace}primary-navigation__link,
+.#{$sagovau-namespace}secondary-navigation__link {
+    color: $sagovau-color-text-reverse;
+    display: block;
+    padding: $sagovau-spacing-unit-base--small;
+    text-decoration: none;
+
+    &--social {
+        display: inline-block;
+    }
+
+    @include media-query(huge) {
+        color: $sagovau-color-brand;
+        display: inline-block;
+        vertical-align: text-top;
+        width: 100%;
+        border-right: 1px solid $sagovau-color-brand;
+        padding: 0 20px;
+        font-weight: normal;
+
+        .primary-navigation__item:first-child & {
+            padding: 0;
+        }
+
+        &--social {
+            border: 0;
+            vertical-align: middle;
+            padding: 0;
+            width: auto;
+            height: 28px;
+            // force line-height of fontawesome.. 
+            .fas,
+            .fab,
+            .fa {
+                line-height: 0.9em;
             }
         }
-
-        &:hover {
-            text-decoration: underline;
-        }
     }
 
-    @media screen and(max-width: 1023px) {
-        .#{$sagovau-namespace}categories {
-            color: #d8d2cd;
-            padding: 12px;
-            text-decoration: none;
-        }
-    
-        .#{$sagovau-namespace}categories.primary-navigation__link:hover {
-            text-decoration: none;
-        }
-    
-        .#{$sagovau-namespace}primary-navigation__item > .secondary-navigation__link {
-            padding: 12px;
-            padding-left: 2em;
-            display: block;
-            color: #ffffff;
-            text-decoration: none;
-        }
-    
-        .#{$sagovau-namespace}secondary-navigation__link:hover {
-            text-decoration: underline;
-        }
+    &:hover {
+        text-decoration: underline;
     }
-    
+}
 
-    .#{$sagovau-namespace}primary-navigation__close {
-        @extend %#{$sagovau-namespace}u-js-only;  // Only display the close button in JavaScript-enabled browsers
-        cursor: pointer;
+@media screen and(max-width: 1023px) {
+    .#{$sagovau-namespace}categories {
+        color: #d8d2cd;
+        padding: 12px;
+        text-decoration: none;
+    }
+
+    .#{$sagovau-namespace}categories.primary-navigation__link:hover {
+        text-decoration: none;
+    }
+
+    .#{$sagovau-namespace}primary-navigation__item > .secondary-navigation__link {
+        padding: 12px;
+        padding-left: 2em;
         display: block;
-        position: absolute;
-        right: 0;
-        top: 0;
+        color: #ffffff;
+        text-decoration: none;
     }
+
+    .#{$sagovau-namespace}secondary-navigation__link:hover {
+        text-decoration: underline;
+    }
+}
+    
+
+.#{$sagovau-namespace}primary-navigation__close {
+    @extend %#{$sagovau-namespace}u-js-only;  // Only display the close button in JavaScript-enabled browsers
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
