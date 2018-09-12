@@ -39,7 +39,7 @@
         list-style: none;
         padding: 0 1.8em;
         text-align: center;
-        border-right: solid 1px $sagovau-color-brand;
+        border-right: solid 1px $sagovau-color-brand-secondary--dark;
         height: 0.8em;
         line-height: 0.8em;
         
@@ -55,7 +55,7 @@
     }
 
     a {
-        color: $sagovau-color-brand;
+        color: $sagovau-color-brand-secondary--dark;
         text-decoration: none;
         &:hover,
         &:focus {

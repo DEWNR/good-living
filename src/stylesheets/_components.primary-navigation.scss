@@ -63,7 +63,7 @@ $sagovau-navigation-width:  320px !default;
 
 /* ul */.#{$sagovau-namespace}primary-navigation__content {
     color: $sagovau-color-text-reverse;
-    font-weight: bold;
+    font-weight: 500;
     list-style: none;   /* [1] */
     margin: 0;          /* [1] */
 
@@ -84,7 +84,7 @@ $sagovau-navigation-width:  320px !default;
     @include media-query(huge) {
         color: $sagovau-color-brand;
         display: grid;        
-        grid-template-columns: 73px repeat(5, auto) 100px;
+        grid-template-columns: 73px repeat(6, auto);
 
         .js & {
             padding: $sagovau-spacing-unit-base--small 0 $sagovau-spacing-unit-base 0;
@@ -137,18 +137,18 @@ $sagovau-navigation-width:  320px !default;
         width: 100%;
         border-right: 1px solid $sagovau-color-brand;
         padding: 0 20px;
-        font-weight: normal;
-
+        
         .primary-navigation__item:first-child & {
             padding: 0;
         }
-
+        
         &--social {
             border: 0;
             vertical-align: middle;
             padding: 0;
             width: auto;
             height: 28px;
+            font-weight: normal;
             // force line-height of fontawesome.. 
             .fas,
             .fab,
