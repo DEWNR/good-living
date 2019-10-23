@@ -32,7 +32,7 @@ $sagovau-color-text-base:               (#2e2925 + #534e4a)/2;  // Manually calc
 $sagovau-path-png: "../images/";
 $sagovau-path-svg: "../images/";
 
-$sagovau-path-fonts: "../fonts/";
+$sagovau-path-fonts: "../../fonts/";
 
 $sagovau-path-shared: "/files/templates/00000000-0000-0000-0000-000000000000/f88a7f3c-df7e-430a-825c-24cfa8dec9a8/";
 
@@ -42,13 +42,12 @@ $sagovau-file-prefix: "gl";
 
 /* = Fonts = */
 
-$sagovau-font-family-highlight:             Dewnrger, "Frutiger W01",Helvetica,Arial,sans-serif;
+$sagovau-font-family-highlight: Dewnrger, "proxima-nova", Helvetica, Arial,sans-serif;
 
 
 // Only bold Dewnrger font is required
+$sagovau-dewnrger-normal-400: false;
+$sagovau-dewnrger-italic-400: false;
 
-$sagovau-dewnrger-normal-400:           false;
-$sagovau-dewnrger-italic-400:           false;
-
-$sagovau-dewnrger-normal-700:           true;
-$sagovau-dewnrger-italic-700:           false;
+$sagovau-dewnrger-normal-700: true;
+$sagovau-dewnrger-italic-700: false;

@@ -17,7 +17,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
 
-
+        <link href="{{ css_path }}inline/fonts.css" rel="stylesheet">
 
 
         <!-- Open Graph metadata -->
@@ -40,7 +40,6 @@
 
         <!-- Prefetch -->
 
-        <link rel="dns-prefetch" href="//fast.fonts.net">
         <link rel="dns-prefetch" href="//www.google-analytics.com">
         <link rel="dns-prefetch" href="//twitter.com">
         <link rel="dns-prefetch" href="//www.facebook.com">
@@ -88,8 +87,6 @@
 
         <!-- Scripts -->
 
-        <script src="//fast.fonts.net/jsapi/e0cc203f-7221-4daf-a2d5-815483dba107.js" async></script>
-
         <script>
 
             var thisPage = {};
@@ -136,12 +133,6 @@
         <link href="{{ css_path }}main.css" rel="stylesheet">
 
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
-
-        <noscript>
-
-          <link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/e0cc203f-7221-4daf-a2d5-815483dba107.css">
-
-        </noscript>
 
         <!-- End Stylesheets -->
 
