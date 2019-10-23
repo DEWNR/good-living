@@ -46,6 +46,13 @@
 
     </div><!-- /wrapper -->
 
+    <div class="footer__content   wrapper  wrapper--large-and-up-ph-small  box__content">
+				<div class="footer__item footer_item__text">
+				<p><a href="//www.environment.sa.gov.au/disclaimer">Disclaimer</a> | <a href="//www.environment.sa.gov.au/privacy">Privacy statement</a> | <a href="//www.environment.sa.gov.au/accessibility">Accessibility</a></p>
+				<p>This site is licensed under a <a href="https://creativecommons.org/licenses/by/3.0/au/">Creative Commons Attribution 3.0 Australia Licence</a> © <a href="//www.environment.sa.gov.au/copyright">Copyright 2019</a></p>
+				</div>
+    </div>
+
 </footer>
 
 <!-- End site footer -->
